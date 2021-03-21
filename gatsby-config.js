@@ -1,22 +1,22 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby`,
-        siteUrl: `https://www.gatsbyjs.com`,
-        description: `Blazing fast modern site generator for React`,
+        title: `Priyank Trivedi || Portfolio & Blog`,
+        siteUrl: `https://trivedi.dev`,
+        description: `Priyank Trivedi || Portfolio & Blog`,
         social:{
             github:``
         },
       },
     plugins:[{
-        resolve: `gatsby-plugin-mdx`,
-        options: {
-            extensions:[`.mdx`,`md`],
-        },
-    },  {
         resolve: `gatsby-source-filesystem`,
         options: {
             name:`blog`,
             path:`${__dirname}/blog`,
+        },
+    },{
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+            extensions:[`.mdx`,`.md`],
         },
     },]
 
