@@ -51,3 +51,32 @@
     width: 100%;
     max-width: 1080px;
 }
+
+.sticky-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    width:100%;
+    padding: 1rem;
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    backdrop-filter: saturate(180%);
+    transition: backgruond-color 0.1 ease-in-out;
+}
+.sticky-nav-button{
+    color:black;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 5%;
+    padding: 0.5rem;
+    margin-right:1rem;
+    display: inline-block;
+    text-decoration: none;
+}
+.sticky-nav-button:hover{
+    color:black;
+    background: #efefef;
+}
