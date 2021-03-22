@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby";
+import Container from "../components/container";
 
 const Home = ({data}) => {
     // console.log(data.site);
@@ -9,7 +10,7 @@ const Home = ({data}) => {
     console.log(post);
     // return(<h1>Hello</h1>);
     return(
-        <div><h1>Blog Post</h1>
+        <Container><h1>Blog Post</h1>
         {post.map((pst)=>{
             const title = pst.frontmatter.title;
             return(
@@ -20,7 +21,7 @@ const Home = ({data}) => {
                 </div>
             );
         })}
-        </div>
+        </Container>
     );
     
 };
