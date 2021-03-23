@@ -6,9 +6,8 @@ const blogPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx; 
     
     const {previous,next} = data.pageContext;
-    console.log(data.pageContext);
-    // const {previous,next} = null;
-    
+    console.log(previous);
+    console.log(next);
     return (
         <Container>
             <h1>{frontmatter.title}</h1>
@@ -17,7 +16,7 @@ const blogPosts = (data) =>{
             {previous === false ? null : (
                 <>
                 {previous && (
-                    <Link to={previous.fields.slug}>
+                    <Link to={`/${previous.slug}`}>
                         <button>{previous.frontmatter.title}</button>
                     </Link>
                 )}
@@ -26,7 +25,7 @@ const blogPosts = (data) =>{
             {next === false ? null : (
                 <>
                 {next && (
-                    <Link to={next.fields.slug}>
+                    <Link to={`/${next.slug}`}>
                         <button>{next.frontmatter.title}</button>
                     </Link>
                 )}

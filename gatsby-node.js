@@ -20,10 +20,17 @@ exports.createPages= ({actions,graphql})=>{
             throw result.errors
         }
         const posts = result.data.allMdx.nodes;
+        // console.log("---------------------------------------");
+        // // console.log(posts);
+        // console.log(posts.slug);
+        // console.log("---------------------------------------");
+        console.log("Length of post is: " + posts.length);
         posts.forEach((post,index)=>{
-            console.log(post.slug);
-            const previous = index === post.length -1 ? null : post[index+1];
-            const next = index ===0 ?null :post[index-1];
+            const previous = (index === 0) ? false : posts[index-1] ;
+            const next = (index === posts.length) ? false :posts[index+1];
+            // console.log(previous + " || " + next)
+            // const previous = posts;
+            // const next = null;
             createPage({
                 path:post.slug,
                 component: blogPostTemplate,
