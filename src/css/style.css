@@ -80,3 +80,12 @@
     color:black;
     background: #efefef;
 }
+
+.tgl{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;   
+    border-radius: 50%;
+    border: none;        
+    transition: all .5s ease;
+}

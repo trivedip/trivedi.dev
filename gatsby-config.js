@@ -33,7 +33,11 @@ module.exports = {
                 ]
             },
         
-    },
+    },{
+        resolve:`gatsby-plugin-styled-components`
+    },{
+        resolve:`react-icons`
+    }    
     ]
 
 }
