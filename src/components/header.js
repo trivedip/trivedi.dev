@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {BiAdjust} from 'react-icons/bi';
 import { useState } from "react";
+import {Link} from "gatsby";
 
 const Toggle = styled.button`
     background-color: ${props => props.theme.pageBackground};
@@ -28,9 +29,9 @@ function Header(props) {
 // const Header =()=>{
     return(
         <div className="sticky-nav">
-            <a href="/" className="sticky-nav-button">Home</a>
-            <a href="/" className="sticky-nav-button">About</a>
-            <a href="/" className="sticky-nav-button">Blog</a>      
+            <Link to="/" className="sticky-nav-button" activeClassName="active">Home</Link>
+            <Link to="/about" className="sticky-nav-button" activeClassName="active">About</Link>
+            <Link to="/blog" className="sticky-nav-button"activeClassName="active" >Blog</Link>      
             <Toggle onClick={changeTheme} className="tgl">{icon}</Toggle>
         </div>
     );
