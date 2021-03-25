@@ -2471,7 +2471,7 @@ var plugins = [{
     "remarkPlugins": [],
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
-    "root": "C:\\Users\\priya\\Desktop\\gatsby"
+    "root": "E:\\Learn\\trivedi.dev"
   }
 }, {
   name: 'gatsby-plugin-mdx',
@@ -2490,7 +2490,7 @@ var plugins = [{
     "remarkPlugins": [],
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
-    "root": "C:\\Users\\priya\\Desktop\\gatsby"
+    "root": "E:\\Learn\\trivedi.dev"
   }
 }, {
   name: 'gatsby-plugin-styled-components',
@@ -7803,24 +7803,24 @@ function v(){return(v=Object.assign||function(e){for(var t=1;t<arguments.length;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!****************************************************************************************!*\
-  !*** external "C:\\Users\\priya\\Desktop\\gatsby\\node_modules\\react-dom\\server.js" ***!
-  \****************************************************************************************/
+/*!*****************************************************************************!*\
+  !*** external "E:\\Learn\\trivedi.dev\\node_modules\\react-dom\\server.js" ***!
+  \*****************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\priya\\Desktop\\gatsby\\node_modules\\react-dom\\server.js");;
+module.exports = require("E:\\Learn\\trivedi.dev\\node_modules\\react-dom\\server.js");;
 
 /***/ }),
 
 /***/ "react":
-/*!***********************************************************************************!*\
-  !*** external "C:\\Users\\priya\\Desktop\\gatsby\\node_modules\\react\\index.js" ***!
-  \***********************************************************************************/
+/*!************************************************************************!*\
+  !*** external "E:\\Learn\\trivedi.dev\\node_modules\\react\\index.js" ***!
+  \************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\priya\\Desktop\\gatsby\\node_modules\\react\\index.js");;
+module.exports = require("E:\\Learn\\trivedi.dev\\node_modules\\react\\index.js");;
 
 /***/ }),
 
