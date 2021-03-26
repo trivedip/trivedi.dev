@@ -7,7 +7,12 @@ module.exports = {
             github:``
         },
       },
-    plugins:[{
+    plugins:[
+        `gatsby-plugin-image`,
+        `react-icons`,
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-postcss`,
+        {
         resolve: `gatsby-source-filesystem`,
         options: {
             name:`blog`,
@@ -31,15 +36,8 @@ module.exports = {
                         }
                     }
                 ]
-            },
-        
-    },{
-        resolve:`gatsby-plugin-styled-components`
-    },{
-        resolve:`react-icons`
-    },{
-        resolve:`gatsby-plugin-image`
-    } 
+            },        
+    }
     ]
 
 }

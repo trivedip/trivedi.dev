@@ -7,6 +7,7 @@
     "gatsby-image": "^3.1.0",
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-mdx": "^2.1.0",
+    "gatsby-plugin-postcss": "^4.1.0",
     "gatsby-plugin-sharp": "^3.1.2",
     "gatsby-plugin-styled-components": "^4.1.0",
     "gatsby-remark-images": "^4.1.1",
@@ -20,5 +21,10 @@
   },
   "scripts": {
     "dev": "gatsby develop"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.10",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.4"
   }
 }

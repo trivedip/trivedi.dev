@@ -2460,6 +2460,25 @@ var trimResultTransformer = function trimResultTransformer() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var plugins = [{
+  name: 'gatsby-plugin-image',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}, {
+  name: 'gatsby-plugin-styled-components',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-styled-components/gatsby-ssr */ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "displayName": true,
+    "fileName": true,
+    "minify": true,
+    "namespace": "",
+    "transpileTemplateLiterals": true,
+    "topLevelImportPaths": [],
+    "pure": false
+  }
+}, {
   name: 'gatsby-plugin-mdx',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-mdx/gatsby-ssr */ "./node_modules/gatsby-plugin-mdx/gatsby-ssr.js"),
   options: {
@@ -2491,25 +2510,6 @@ var plugins = [{
     "rehypePlugins": [],
     "mediaTypes": ["text/markdown", "text/x-markdown"],
     "root": "E:\\Learn\\trivedi.dev"
-  }
-}, {
-  name: 'gatsby-plugin-styled-components',
-  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-styled-components/gatsby-ssr */ "./node_modules/gatsby-plugin-styled-components/gatsby-ssr.js"),
-  options: {
-    "plugins": [],
-    "displayName": true,
-    "fileName": true,
-    "minify": true,
-    "namespace": "",
-    "transpileTemplateLiterals": true,
-    "topLevelImportPaths": [],
-    "pure": false
-  }
-}, {
-  name: 'gatsby-plugin-image',
-  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-image/gatsby-ssr */ "./node_modules/gatsby-plugin-image/gatsby-ssr.js"),
-  options: {
-    "plugins": []
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
