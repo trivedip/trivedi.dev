@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link,graphql } from "gatsby";
-import Container from "../components/container";
 
 
 const Blog = ({data}) => {
     // console.log(data.site);
-    const siteTitle=  data.site.siteMetadata.title;
-    const siteDescription = data.site.siteMetadata.description;
+    // const siteTitle=  data.site.siteMetadata.title;
+    // const siteDescription = data.site.siteMetadata.description;
     const post = data.allMdx.nodes;
     // return(<h1>Hello</h1>);
     return(
-        <Container><h1>Blog Post</h1>
+        <><h1>Blog Post</h1>
         {post.map((pst)=>{
             const title = pst.frontmatter.title;
             return(
@@ -23,7 +22,7 @@ const Blog = ({data}) => {
                 </div>
             );
         })}
-        </Container>
+        </>
     );
     
 };

@@ -1,47 +1,22 @@
 import React from 'react';
 import Header from './header'
-import { ThemeProvider } from "styled-components";
-import styled from 'styled-components';
-import { useState } from "react";
-
-const LightTheme={
-    pageBackground:"white",
-    titleColor:"black",
-    tagLineColor:"black"
-}
-const DarkTheme={
-    pageBackground:"black",
-    titleColor:"white",
-    tagLineColor:"white"
-    
-}
-
-const themes={
-    light:LightTheme,
-    dark:DarkTheme
-}
-
-const Page = styled.div`
-    background-color: ${props=>props.theme.pageBackground};
-    min-height: 100vh;
-    width:100%
-`;
-
+import { ThemeProvider  } from './ThemeContext';
+import GlobalStyles from '../css/styled';
+import PropTypes from 'prop-types';
 const Container =({children}) => {
-    const [theme,setTheme] = useState("light");
+    const root = window.document.documentElement;
+    console.log(root);
     return (
-    <ThemeProvider theme={themes[theme]}>
-        <Page  >
-            <div>
-            <div theme={theme} className="container" >
-                {/* <Header/> */}
-                <Header theme={theme} setTheme={setTheme} />
-                <main className="main">{children}</main>
-            </div>
-        </div>
-       </Page>
-    </ThemeProvider>
+        <ThemeProvider>
+            <GlobalStyles />            
+            <Header  />
+            {children}
+        </ThemeProvider>
     )
 }
+
+Container.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default Container;

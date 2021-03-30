@@ -1,7 +1,6 @@
 import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
-import Container from "../components/container";
 const blogPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx; 
     
@@ -9,7 +8,7 @@ const blogPosts = (data) =>{
     console.log(previous);
     console.log(next);
     return (
-        <Container>
+        <>
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.date}</p>
             <article><MDXRenderer>{body}</MDXRenderer></article>
@@ -31,7 +30,7 @@ const blogPosts = (data) =>{
                 )}
                 </>
             )}
-        </Container>
+        </>
     )
 };
 export default blogPosts;

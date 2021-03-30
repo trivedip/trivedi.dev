@@ -1,50 +1,50 @@
-import React from 'react'
+import React from 'react';
 
-const getInitialTheme = _ => {
-  if (typeof window !== 'undefined' && window.localStorage) {
-    const storedPrefs = window.localStorage.getItem('color-theme')
-    if (typeof storedPrefs === 'string') {
-      return storedPrefs
+import {
+  COLORS,
+  COLOR_MODE_KEY,
+  INITIAL_COLOR_MODE_CSS_PROP,
+} from '../constants';
+
+export const ThemeContext = React.createContext();
+
+export const ThemeProvider = ({ children }) => {
+  const [colorMode, rawSetColorMode] = React.useState("undefined");
+
+  React.useEffect(() => {
+    const root = window.document.documentElement;
+    // Because colors matter so much for the initial page view, we're
+    // doing a lot of the work in gatsby-ssr. That way it can happen before
+    // the React component tree mounts.
+    const initialColorValue = root.style.getPropertyValue(
+      INITIAL_COLOR_MODE_CSS_PROP
+    );
+
+    rawSetColorMode(initialColorValue);
+  }, []);
+
+  const contextValue = React.useMemo(() => {
+    function setColorMode(newValue) {
+      const root = window.document.documentElement;
+
+      localStorage.setItem(COLOR_MODE_KEY, newValue);
+
+      Object.entries(COLORS).forEach(([name, colorByTheme]) => {
+        const cssVarName = `--color-${name}`;
+        root.style.setProperty(cssVarName, colorByTheme[newValue]);
+      });
+      
+      rawSetColorMode(newValue);
     }
-
-    const userMedia = window.matchMedia('(prefers-color-scheme: dark)')
-    if (userMedia.matches) {
-      return 'dark'
-    }
-  }
-
-  return 'dark'
-}
-
-export const ThemeContext = React.createContext()
-
-export const ThemeProvider = ({ initialTheme, children }) => {
-  const [theme, setTheme] = React.useState(getInitialTheme)
-
-  const rawSetTheme = theme => {
-    const root = window.document.documentElement
-    const isDark = theme === 'dark'
-
-    root.classList.remove(isDark ? 'light' : 'dark')
-    root.classList.add(theme)
-
-    localStorage.setItem('color-theme', theme)
-  }
-
-  if (initialTheme) {
-    rawSetTheme(initialTheme)
-  }
-
-  React.useEffect(
-    _ => {
-      rawSetTheme(theme)
-    },
-    [theme]
-  )
+    return {
+      colorMode,
+      setColorMode,
+    };
+  }, [colorMode, rawSetColorMode]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
-  )
-}
+  );
+};

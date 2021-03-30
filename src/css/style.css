@@ -2,23 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-  
-.dark {
---color-bg-primary: #2d3748;
---color-bg-secondary: #283141;
---color-text-primary: #f7fafc;
---color-text-secondary: #e2e8f0;
---color-text-accent: #81e6d9;
-}
 
-.light {
---color-bg-primary: #ffffff;
---color-bg-secondary: #edf2f7;
---color-text-primary: #2d3748;
---color-text-secondary: #4a5568;
---color-text-accent: #2b6cb0;
-}
-
+ 
 *{
     font-family:"Open Sans", sans-serif;
     margin:0px;
@@ -88,7 +73,7 @@
     transition: backgruond-color 0.1 ease-in-out;
 }
 .sticky-nav-button{
-    color:black;
+    /* color:black; */
     background: transparent;
     border: 1px solid transparent;
     border-radius: 5%;
@@ -98,8 +83,8 @@
     text-decoration: none;
 }
 .sticky-nav-button:hover{
-    color:black;
-    background: #efefef;
+    /* color:black; */
+    /* background: #efefef; */
 }
 
 .tgl{
@@ -111,6 +96,6 @@
     transition: all .5s ease;
 }
 .active{
-    background-color:black;
-    color:white;
+    /* background-color:black; */
+    /* color:white; */
 } 
