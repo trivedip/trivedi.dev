@@ -4,13 +4,14 @@ import { ThemeProvider  } from './ThemeContext';
 import GlobalStyles from '../css/styled';
 import PropTypes from 'prop-types';
 const Container =({children}) => {
-    const root = window.document.documentElement;
-    console.log(root);
     return (
         <ThemeProvider>
             <GlobalStyles />            
-            <Header  />
+            <Header className="max-w-screen-xl mx-auto"/>
+            <div className="max-w-screen-xl mx-auto">
             {children}
+            </div>
+            <div className="background-tester"></div>
         </ThemeProvider>
     )
 }
