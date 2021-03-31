@@ -37,7 +37,14 @@ module.exports = {
                     }
                 ]
             },        
-    }
+    },{
+        resolve: "gatsby-plugin-react-svg",
+        options: {
+          rule: {
+            include: `${__dirname}/pages/assets/svg/` // See below to configure properly
+          }
+        }
+      }
     ]
 
 }

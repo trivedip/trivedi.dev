@@ -5,7 +5,7 @@ export const COLORS = {
     },
     background: {
       light: 'hsl(0deg, 0%, 100%)', // white
-      dark: '#282C34', // navy navy blue
+      dark: '#091a28e0', // navy navy blue
     },
     primary: {
       light: 'hsl(340deg, 100%, 40%)', // Pinkish-red

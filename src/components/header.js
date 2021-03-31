@@ -10,7 +10,7 @@ function Header() {
     
     return(
         <>
-        <div className="sticky-nav bg-primary max-w-screen-xl mx-auto">
+        <div className="sticky-nav max-w-screen-xl mx-auto">
         <Link to="/" className="sticky-nav-button" >Home</Link>
         <Link to="/about/" className="sticky-nav-button" activeClassName="" >About</Link>
         <Link to="/blog/" className="sticky-nav-button" activeClassName="">Blog</Link>      
