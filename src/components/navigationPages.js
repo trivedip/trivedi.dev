@@ -4,19 +4,23 @@ const pages =[
         id:0,
         to:"/",
         name:"Home",
-        active:true,          
+        ariaLabel:"Go to homepage of the website",
+        active:true,  
+
     },
     {
         id:1,
-        to:"/about/",
-        name:"About Me",
-        active:true,    
+        to:"/blog/",
+        name:"Blog",
+        ariaLabel:"Blog",
+        active:true,
     },
     {
         id:2,
-        to:"/blog/",
-        name:"Blog",
-        active:true,
+        to:"/about/",
+        name:"About Me",
+        ariaLabel:"About Priyank Trivedi",
+        active:true,    
     },
 ]
 export default pages;

@@ -124,12 +124,8 @@
 }
 
 .background-tester{
-    /* position:absolute; */
     top: 0px;
     width: 100%;
-    /* background-color: red; */
-    /* z-index: 9; */
-    /* z-index: 0; */
     height: 100vh;
 
 }
@@ -143,8 +139,31 @@
 
 .background-ele{
     position:absolute;
-    width: 100px;
+    width: 40px;
     height: 100px;
     background-color:var(--color-secondaryy);
     bottom:10px;
+    left:-10px;
+    transform:rotate(45deg);
+}
+
+.bg-blob-span{
+    animation: turn 20s linear infinite;
+    position: absolute;
+    top: calc(-75vh); 
+    left: 0vw;   
+}
+.bg-blob{
+    transform: scale(3);
+    opacity: 0.4;
+    fill:red;
+}
+
+@keyframes turn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
 }

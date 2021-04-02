@@ -10,7 +10,6 @@ const DarkToggle = () => {
   if (!colorMode) {
     return null;
   }
-  const iconClass = (colorMode === "light") ? "cl-red" : "cl-white";
   
   const toggleClass =(ev)=>{
     if (colorMode==='light'){
@@ -27,8 +26,8 @@ const DarkToggle = () => {
 
 
   return (
-      <button className="hidden sm:block hover:text-accent transition duration-150 rotate-0">
-        <BiAdjust onClick={(ev)=>{toggleClass(ev);}} className="w-6 h-6 md:w-5 md:h-5 fill-current"/>     
+      <button className="hidden text-2xl sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125">
+        <BiAdjust onClick={(ev)=>{toggleClass(ev);}} size="170px" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150"/>     
       </button>
   );
 };

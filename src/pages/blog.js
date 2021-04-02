@@ -15,13 +15,13 @@ const Blog = ({data}) => {
         {post.map((pst)=>{
             const title = pst.frontmatter.title;
             return(
+              <Link className="card-link" to={`/${pst.slug}`}>
                 <div className="card" key={pst.slug}>
-                  <Link className="card-link" to={`/${pst.slug}`}>
                     <h1 className="card-title">{title}</h1>
                     <p className="card-date">{pst.frontmatter.date}</p>
                     <p className="card-description">{pst.frontmatter.description}</p>
-                    </Link>
                 </div>
+              </Link>
             );
         })}
         </div>
