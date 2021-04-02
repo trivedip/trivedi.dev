@@ -24,19 +24,12 @@ const DarkToggle = () => {
     }
   };
 
+
+
   return (
-    <label>
-      {/* <input
-        type="checkbox"
-        checked={colorMode === 'dark'}
-        onChange={ev => {
-          setColorMode(ev.target.checked ? 'dark' : 'light');
-        }}
-      />{' '}
-      Dark */}
-    <BiAdjust onClick={(ev)=>{toggleClass(ev);}} className="iconClass"/> 
-    
-    </label>
+      <button className="hidden sm:block hover:text-accent transition duration-150 rotate-0">
+        <BiAdjust onClick={(ev)=>{toggleClass(ev);}} className="w-6 h-6 md:w-5 md:h-5 fill-current"/>     
+      </button>
   );
 };
 

@@ -9,7 +9,9 @@ const Blog = ({data}) => {
     const post = data.allMdx.nodes;
     // return(<h1>Hello</h1>);
     return(
-        <><h1>Blog Post</h1>
+        <>
+        <div style={{zIndex:1}}>
+        <h1>Recent Post</h1>
         {post.map((pst)=>{
             const title = pst.frontmatter.title;
             return(
@@ -22,6 +24,7 @@ const Blog = ({data}) => {
                 </div>
             );
         })}
+        </div>
         </>
     );
     
