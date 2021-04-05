@@ -12,11 +12,17 @@ module.exports = {
         `react-icons`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-postcss`,
-        {
+    {
         resolve: `gatsby-source-filesystem`,
         options: {
             name:`blog`,
             path:`${__dirname}/blog`,
+        },
+    },{
+        resolve: `gatsby-source-filesystem`,
+        options: {
+            name:`blog`,
+            path:`${__dirname}/experience`,
         },
     },{
         resolve: `gatsby-plugin-mdx`,

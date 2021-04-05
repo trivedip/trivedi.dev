@@ -15,6 +15,10 @@ export const COLORS = {
       light: '#9987ef', // Purplish-blue
       dark: '#00aacc', // Cyan
     },
+    svg:{
+      light:'#83abcac7',
+      dark:'#010305e0',
+    },
     // Grays, scaling from least-noticeable to most-noticeable
     gray300: {
       light: 'hsl(0deg, 0%, 70%)',

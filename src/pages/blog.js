@@ -17,7 +17,7 @@ const Blog = ({data}) => {
             return(
               <Link className="card-link" to={`/${pst.slug}`}>
                 <div className="card" key={pst.slug}>
-                    <h1 className="card-title">{title}</h1>
+                    <h1 className="min-w-full">{title}</h1>
                     <p className="card-date">{pst.frontmatter.date}</p>
                     <p className="card-description">{pst.frontmatter.description}</p>
                 </div>
@@ -40,7 +40,9 @@ export const pageQuery = graphql`
           title
         }
     }
-    allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
+    allMdx(sort: {order: DESC, fields: [frontmatter___date]}
+      
+      ) {
         nodes {
           slug
           frontmatter {

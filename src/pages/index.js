@@ -1,8 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby";
-// import Container from "../components/container";
-import { StaticImage } from "gatsby-plugin-image"
-import Hero from "../../src/components/hero";
+import Hero from "../components/indexComponents/hero";
 
 
 const Home = ({data}) => {

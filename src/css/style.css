@@ -100,7 +100,8 @@
 }
 .active{
     /* background-color:black; */
-    /* color:white; */
+    border-bottom:2px solid var(--color-text);
+    border-radius: 0px;
 } 
 
 .cl-white{
@@ -139,24 +140,34 @@
 
 .background-ele{
     position:absolute;
-    width: 40px;
+    width: 60px;
     height: 100px;
-    background-color:var(--color-secondaryy);
-    bottom:10px;
-    left:-10px;
+    background-color:var(--color-svg);
+    bottom:calc(60vh);
+    left:calc(5vw);
     transform:rotate(45deg);
+    opacity:0.4;
 }
 
 .bg-blob-span{
-    animation: turn 20s linear infinite;
+    animation: turn 30s linear infinite;
     position: absolute;
-    top: calc(-75vh); 
-    left: 0vw;   
+    top: calc(-60vh); 
+    left: 14vw;   
 }
 .bg-blob{
-    transform: scale(3);
+    transform: scale(4);
     opacity: 0.4;
-    fill:red;
+    fill:var(--color-svg);
+}
+
+@media (max-width: 768px) { 
+    .bg-blob{
+        transform: scale(3);
+    }   
+    .background-ele{
+        display:none;
+    }
 }
 
 @keyframes turn{

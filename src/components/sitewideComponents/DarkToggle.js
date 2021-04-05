@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { ThemeContext } from './ThemeContext';
+import { ThemeContext } from '../ThemeContext';
 import {BiAdjust} from 'react-icons/bi';
 
 

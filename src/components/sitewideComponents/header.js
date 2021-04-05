@@ -20,7 +20,7 @@ function Header() {
         </span>
             <div className="hidden sm:flex flex-grow items-center space-x-6">
                 {pages.map((page)=>(
-                    (page.active) ? <Link to={page.to} className="sticky-nav-button text-lg" aria-label={page.ariaLabel}>{page.name}</Link> : ''
+                    (page.active) ? <Link to={page.to} className="sticky-nav-button text-lg" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
                 ))}
             </div>
             <DarkToggle/>        
