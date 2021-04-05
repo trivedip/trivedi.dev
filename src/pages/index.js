@@ -1,13 +1,15 @@
 import React from 'react';
 import { graphql } from "gatsby";
 import Hero from "../components/indexComponents/hero";
+import LatestBlog from '../components/indexComponents/latestBlogContainer';
 
 
 const Home = ({data}) => {
   
     return(
         <>
-          <Hero/>
+          <Hero/>          
+          <LatestBlog/>
         </>
     );
     
