@@ -14,14 +14,16 @@ const Hero =()=>{
                 <div className="mt-12 lg:mt-0 max-w-4xl text-3xl sm:text-4xl text-primary font-semibold sm:text-left md:text-center lg:text-left">
                     <div>
                     Hi, I’m Priyank. I’m an experienced multifaceted developer with deep interest in modern, accessible application & web development.
-                    </div>                    
-                    <a className="my-3 p-1 text-lg" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <GrLinkDown className="fill-current" style={{display:'inline-block',transform:'scaleX()',marginTop:'-4px'}}/></a>    
-                    <Link to="/about/" className="my-3 md:mx-5 p-1 text-lg" style={{border:'1px solid var(--color-gray700)'}}>More About Me / Résumé <GrFormNextLink style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
+                    </div> 
+                    <div className="flex flex-col md:flex-row md:flex-start">
+                    <a className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <GrLinkDown className="fill-current" style={{display:'inline-block',transform:'scaleX()',marginTop:'-4px'}}/></a>    
+                    <Link to="/about/"  className="my-3 md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <GrFormNextLink style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
+                    </div>                   
                 </div>
 
                     <div className="relative">
                     <div className="h-40 w-40 md:h-45 md:w-45 lg:h-52 lg:w-52 rounded-full overflow-hidden">
-                        <StaticImage src="../../pages/assets/image/prop-pic.jpeg" placeholder="blurred"></StaticImage>
+                        {/* <StaticImage src="../../pages/assets/image/prop-pic.jpeg" placeholder="blurred"></StaticImage> */}
                     </div>
                 </div>
             </div>  

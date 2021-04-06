@@ -26,7 +26,8 @@ const DarkToggle = () => {
 
 
   return (
-      <button className="hidden text-2xl sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125">
+      <button className="hidden sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125">
+        <div className="sr-only">Toggle dark mode</div>
         <BiAdjust onClick={(ev)=>{toggleClass(ev);}} size="170px" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150"/>     
       </button>
   );

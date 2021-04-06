@@ -22,7 +22,7 @@ const Background =()=>{
         );
     }
     return(<>
-         <div className="page-background" style={{overflow:'hidden'}}>
+         <div className="page-background">
                 {accssBdy()}
                 {/* <div className="background-ele"></div> */}
                 <span className="bg-blob-span">

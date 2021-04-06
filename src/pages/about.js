@@ -7,8 +7,11 @@ const About = () => {
   
     return(
         <>
-          <h1>Hello there from Priyank, this will be new About me page.</h1>
-          <StaticImage placeholder="blurred" src="./assets/image/img1.jpg"></StaticImage>
+          <span>
+            <div className="img" style={{backgroundColor:'skyblue',width:"40%"}}>
+              <StaticImage imgClassName="img" style={{}} placeholder="blurred" src="./assets/image/img1.jpg"></StaticImage>              
+            </div>
+          </span>
         </>
     );
     
