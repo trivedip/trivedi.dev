@@ -11,6 +11,12 @@
     border:0px;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 .card{
     padding: 2rem;
     list-style: none;

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from "gatsby";
 import Hero from "../components/indexComponents/hero";
 import LatestBlog from '../components/indexComponents/latestBlogContainer';
-
+import Experience from '../components/indexComponents/recentExperienceContainer';
 
 const Home = ({data}) => {
   
@@ -10,6 +10,7 @@ const Home = ({data}) => {
         <>
           <Hero/>          
           <LatestBlog/>
+          <Experience/>
         </>
     );
     
