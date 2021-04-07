@@ -1,14 +1,14 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
-import {GrFormNextLink} from 'react-icons/gr';
-import {GrLinkDown} from 'react-icons/gr';
+import {BsArrowDown} from 'react-icons/bs';
+import {BsArrowRight} from 'react-icons/bs';
 import { Link } from 'gatsby';
 import { IconContext } from "react-icons";
 
 const Hero =()=>{
     return(
     <>
-     <IconContext.Provider value={{ color: 'red' }}>
+     {/* <IconContext.Provider> */}
         <div className="mt-12 sm:mt-2 flex flex-col-reverse lg:flex-row items-center lg:justify-between lg:space-x-6">
             <div className="mt-12 sm:mt-2 flex flex-col-reverse lg:flex-row items-center lg:justify-between lg:space-x-6">
                 <div className="mt-12 lg:mt-0 max-w-4xl text-3xl sm:text-4xl text-primary font-semibold sm:text-left md:text-center lg:text-left">
@@ -16,8 +16,8 @@ const Hero =()=>{
                     Hi, I’m Priyank. I’m an experienced multifaceted developer with deep interest in modern, accessible application & web development.
                     </div> 
                     <div className="flex flex-col md:flex-row md:flex-start">
-                    <a className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <GrLinkDown className="fill-current" style={{display:'inline-block',transform:'scaleX()',marginTop:'-4px'}}/></a>    
-                    <Link to="/about/"  className="my-3 md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <GrFormNextLink style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
+                    <a className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <BsArrowDown className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></a>    
+                    <Link to="/about/"  className="my-3 md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <BsArrowRight className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
                     </div>                   
                 </div>
 
@@ -28,7 +28,7 @@ const Hero =()=>{
                 </div>
             </div>  
         </div>
-     </IconContext.Provider>
+     {/* </IconContext.Provider> */}
     </>
     )
 };

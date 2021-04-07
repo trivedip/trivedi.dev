@@ -13,7 +13,9 @@ const Footer = ()=>{
                 <div className="flex-1 flex justify-end">{pages.map((page)=>(
                     (page.active) ? <Link to={page.to} className="sticky-nav-button text-sm" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
                 ))}
+                <div style={{transform:"scale(0.8)",marginTop:"10px"}}>
                 <DarkToggle/>
+                </div>
                 </div>
             </div>
         </section>

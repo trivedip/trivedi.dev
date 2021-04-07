@@ -17,6 +17,11 @@ body {
 	min-height: 100vh;
 }
 
+::selection{
+    color:white;
+    background-color: #85cdef82;
+}
+
 .card{
     padding: 2rem;
     list-style: none;
