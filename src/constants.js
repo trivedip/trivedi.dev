@@ -32,6 +32,11 @@ export const COLORS = {
       light: 'hsl(0deg, 0%, 30%)',
       dark: 'hsl(0deg, 0%, 70%)',
     },
+      grn:{
+        light:'#d1fae5',
+        dark: '#75a98ecc',
+      }
+    
   };
   
   export const COLOR_MODE_KEY = 'color-mode';

@@ -115,6 +115,11 @@ body {
     border-radius: 0px;
 } 
 
+.active::before{
+    content:'#';
+    padding-right: 0.2rem;
+}
+
 .cl-white{
     transform: rotate(180deg);
     transition: all 0.3s ease;
@@ -176,10 +181,11 @@ body {
 }
 .img-container{
     transform:perspective(600px) rotateY(2deg) !important;
+    background-color:var(--color-gray500);
 }
 
 .img{
-    transform:perspective(600px) rotateY(4deg) !important;
+    transform:perspective(600px) rotateY(4deg) translateX(6px) translateY(3px) !important;    
 }
 
 .gatsby-image-wrapper{
@@ -202,4 +208,11 @@ body {
     100%{
         transform: rotate(1turn);
     }
+}
+
+.edu-title:before{
+    content:'\2192';
+    font-weight:bold;
+    font-size: 1.4rem;
+    /* padding-right:1rem; */
 }

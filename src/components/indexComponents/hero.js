@@ -16,8 +16,8 @@ const Hero =()=>{
                     Hi, I’m Priyank. I’m an experienced multifaceted developer with deep interest in modern, accessible application & web development.
                     </div> 
                     <div className="flex flex-col md:flex-row md:flex-start">
-                    <a className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <BsArrowDown className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></a>    
-                    <Link to="/about/"  className="my-3 md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <BsArrowRight className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
+                    <a href="#down" className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <BsArrowDown className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></a>    
+                    <Link to="/about/"  className="my-3 not-sr-only md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <BsArrowRight className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
                     </div>                   
                 </div>
 
