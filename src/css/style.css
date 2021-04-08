@@ -19,7 +19,7 @@ body {
 
 ::selection{
     color:white;
-    background-color: #85cdef82;
+    background-color: #457b9482;
 }
 
 .card{
@@ -174,9 +174,16 @@ body {
     opacity: 0.4;
     fill:var(--color-svg);
 }
+.img-container{
+    transform:perspective(600px) rotateY(2deg) !important;
+}
 
 .img{
-    transform:perspective(600px) rotateY(2deg) !important;
+    transform:perspective(600px) rotateY(4deg) !important;
+}
+
+.gatsby-image-wrapper{
+    overflow:visible;
 }
 
 @media (max-width: 768px) { 
