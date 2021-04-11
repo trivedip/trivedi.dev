@@ -11,6 +11,7 @@ const expPosts = (data) =>{
         <>
             <h1>{frontmatter.title}</h1>
             <p>{frontmatter.date}</p>
+            <p>Duration: {frontmatter.startDate} - {frontmatter.endDate}</p>
             <article><MDXRenderer>{body}</MDXRenderer></article>
             {previous === false ? null : (
                 <>
@@ -41,6 +42,8 @@ query PostsByExp($slug:String){
         frontmatter{
             title
             date(formatString:"Do MMMM YYYY")
+            startDate(formatString:"Do MMMM YYYY")
+            endDate(formatString:"Do MMMM YYYY")
         }
     }
 }

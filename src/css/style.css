@@ -191,12 +191,38 @@ body {
     overflow:visible;
 }
 
+.lst{
+    margin-left: auto !important;
+}
+
+.fixer{
+    height: unset important;
+}
+
+@media (min-width: 768px) { 
+    .fixer{
+        height: 8rem !important;
+    }
+}
+
 @media (max-width: 768px) { 
     .bg-blob{
         transform: scale(3);
     }   
     .background-ele{
         display:none;
+    }
+    .menu-open{
+        min-height: 40vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        display: flex;
+        flex-grow: 1;
+        justify-items: flex-start;
+    }
+    .lst{
+        margin-left: unset !important;
     }
 }
 

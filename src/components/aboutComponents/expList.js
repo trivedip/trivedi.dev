@@ -11,9 +11,12 @@ const ExpList = ()=>{
                     slug
                     frontmatter {
                       date(formatString: "DD MMMM YYYY")
+                      startDate(formatString: "DD MMMM YYYY")
+                      endDate(formatString: "DD MMMM YYYY")
                       description
                       published
                       title
+                      bullets
                     }
                   }
                 }
@@ -23,16 +26,31 @@ const ExpList = ()=>{
             Object.keys(data.allMdx.nodes).map((key_index)=>{
                 const allPost = data.allMdx.nodes;
                 const post = allPost[key_index];
+                
                 return(
-                <>     
+                <> 
+                
                 <Link to={`/${post.slug}`}>
-                <div className="py-5 px-5 rounded hover:bg-gray-600 hover:text-gray-50">
-                    <span className="flex py-1.5 rounded" >
-                        <div className="w-5/6">{post.frontmatter.title}</div>
-                        <div className="w-1/6 ml-auto flex justify-end">{post.frontmatter.date}</div>
+                <div className="p-3 md:p-5 rounded hover:bg-gray-600 hover:text-gray-50">
+                    <span className="flex flex-col md:flex-row py-1.5 rounded" >
+                        <div className="">{post.frontmatter.title}</div>
+                        <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate}</div>
                     </span>
                     <div>
                         {post.frontmatter.description}
+                    </div>
+                    <div>
+                        <ul className="list-disc px-3 md:px-5">
+                    {
+                        Object.entries(post.frontmatter.bullets).map((key)=>{
+                            return(
+                            <>
+                                <li>{key[1]} </li>
+                            </>
+                            )
+                            })
+                    }
+                    </ul>
                     </div>
                 </div>
                 </Link>       
