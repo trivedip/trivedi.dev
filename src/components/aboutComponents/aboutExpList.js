@@ -11,7 +11,7 @@ const about  ={
     },{
         university:"Gujarat Technological University",
         level:"Bachelor's",
-        major:"Information Technology (eq: computer science)",
+        major:"Information Technology (eq: Computer Science)",
         location:"Rajkot, India",
         year:"",
     }],

@@ -40,6 +40,10 @@ export const COLORS = {
       light:'#bbd9f1ab',
       dark:'#131a1fab'
     },
+    bgpills:{
+      light:'#6de6b6',
+      dark:'#4fb18a'
+    },    
     selection:{
       light:'#457b9482',
       dark:'#cafdff73'
