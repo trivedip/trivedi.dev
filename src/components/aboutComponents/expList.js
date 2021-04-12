@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 const ExpList = ()=>{
     return(
         <StaticQuery query={graphql`
-                query{ allMdx(sort: {order: DESC, fields: [frontmatter___date]}
+                query{ allMdx(sort: {order: DESC, fields: [frontmatter___startDate]}
                     filter: {frontmatter: {published: {eq: true}}, fileAbsolutePath: { regex: "/experience/"}}
                 ) {
                   nodes {
@@ -31,12 +31,12 @@ const ExpList = ()=>{
                 <> 
                 
                 <Link to={`/${post.slug}`}>
-                <div className="p-3 md:p-5 rounded hover:bg-gray-600 hover:text-gray-50">
+                <div className="p-3 md:p-5 my-3 md:my-5 rounded shadow hover:bg-gray-600 hover:text-gray-50 blocks-bg">
                     <span className="flex flex-col md:flex-row py-1.5 rounded" >
                         <div className="">{post.frontmatter.title}</div>
                         <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate}</div>
                     </span>
-                    <div>
+                    <div className="mb-1">
                         {post.frontmatter.description}
                     </div>
                     <div>
@@ -45,7 +45,7 @@ const ExpList = ()=>{
                         Object.entries(post.frontmatter.bullets).map((key)=>{
                             return(
                             <>
-                                <li>{key[1]} </li>
+                                <li className="py-1">{key[1]} </li>
                             </>
                             )
                             })

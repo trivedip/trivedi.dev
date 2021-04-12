@@ -247,3 +247,7 @@ body {
 .bg-blue{
     background-color:var(--color-eleBlue);
 }
+
+.blocks-bg{
+    background: var(--color-blocks);
+}

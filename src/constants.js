@@ -43,6 +43,10 @@ export const COLORS = {
     selection:{
       light:'#457b9482',
       dark:'#cafdff73'
+    },
+    blocks:{
+      light:'#f9fafb',
+      dark:'#131a1fab'
     }
     
   };

@@ -5,13 +5,11 @@ import {VscFilePdf} from 'react-icons/Vsc';
 import { IconContext } from "react-icons";
 const AboutHeader =()=>{
     return(
-        <>
-        
-        <span className="flex flex-col md:flex-row">
-          
-        <div className="self-center overflow-visible img-container shadow-xl bg-blue" style={{flexShrink:'15'}}>
-            <StaticImage imgClassName="img shadow-xl" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>              
-        </div> 
+        <>        
+        <span className="flex flex-col md:flex-row space-y-10 md:space-y-0">          
+          <div className="self-center overflow-visible img-container shadow-xl bg-blue" style={{flexShrink:'15'}}>
+              <StaticImage imgClassName="img shadow-xl" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>              
+          </div> 
           <div className="justify-end" style={{flexShrink:'20'}}>
             <div className="flex flex-col md:ml-20 text-xl justify-end">
               <h1 className="text-3xl mb-5 uppercase tracking-widest">About Me</h1>
@@ -26,8 +24,7 @@ const AboutHeader =()=>{
               </div>              
             </div>
           </div>          
-        </span>
-        
+        </span>        
       </>
     );
 };

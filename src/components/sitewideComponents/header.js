@@ -18,7 +18,7 @@ function Header() {
       };
     return(
         <>
-        <div className="sm:hidden z-20 right-0 px-5 py-12 z-50 focus:outline-none" >
+        <div className="sm:hidden z-20 absolute right-0 px-5 py-12 z-50 focus:outline-none" >
                     <BiMenu className="w-8 h-8" style={{transform:'scale(1.8)'}} onClick={toggleMenu}/>
                 </div>
         <div className={menu ? "container m-auto px-5 sm:px-12 md:px-20 max-w-screen-xl h-32 overflow-hidden":"container m-auto px-5 sm:px-12 md:px-20 max-w-screen-xl fixer"}>
