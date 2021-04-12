@@ -16,7 +16,9 @@ const ExpList = ()=>{
                       description
                       published
                       title
+                      role
                       bullets
+                      company
                     }
                   }
                 }
@@ -28,14 +30,14 @@ const ExpList = ()=>{
                 const post = allPost[key_index];
                 
                 return(
-                <> 
-                
+                <>                 
                 <Link to={`/${post.slug}`}>
                 <div className="p-3 md:p-5 my-3 md:my-5 rounded shadow hover:bg-gray-600 hover:text-gray-50 blocks-bg">
-                    <span className="flex flex-col md:flex-row py-1.5 rounded" >
-                        <div className="">{post.frontmatter.title}</div>
+                    <span className="flex flex-col md:flex-row pt-1.5 rounded" >
+                        <div className="">{post.frontmatter.role}</div>
                         <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate}</div>
                     </span>
+                    <div className="pb-2">{post.frontmatter.company}</div>
                     <div className="mb-1">
                         {post.frontmatter.description}
                     </div>
