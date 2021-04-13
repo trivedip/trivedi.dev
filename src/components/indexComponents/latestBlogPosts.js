@@ -29,7 +29,7 @@ const LatestBlogPosts = () => {
             return(
             <>    
             <Link to={`/${post.slug}`}>
-                <div className="py-5 px-5 rounded hover:bg-gray-600 hover:text-gray-50">
+                <div className="py-5 px-5 rounded hover:bg-gray-600 hover:text-gray-50 relative">
                     <span className="flex py-1.5 rounded" >
                         <div className="w-5/6">{post.frontmatter.title}</div>
                         <div className="w-1/6 ml-auto flex justify-end">{post.frontmatter.date}</div>

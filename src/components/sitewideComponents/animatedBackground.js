@@ -27,8 +27,8 @@ const Background =()=>{
     return(<>
     
         {loaded?
-        <div className="relative z-0">
-         <div className="page-background ">
+        <div className="">
+         <div className="page-background z-0">
                 {accssBdy()}
                 {/* <div className="background-ele"></div> */}
 
