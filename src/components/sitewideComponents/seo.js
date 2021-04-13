@@ -24,7 +24,7 @@ const SEO = ({description, lang, meta, title,link}) =>{
         link={[{
             rel: `icon`,
             type: `image/jpg`,
-            href: `../../img/pt.jpg`}
+            href: `../../img/pt.png`}
         ]}   
         meta={[
             {

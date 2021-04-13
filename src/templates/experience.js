@@ -1,36 +1,39 @@
 import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
+import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
 const expPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx; 
     
-    const {previous,next} = data.pageContext;
-    console.log(previous);
-    console.log(next);
+    const {previous,next} = data.pageContext;  
+    console.log(previous) ;
     return (
         <>
-            <h1>{frontmatter.title}</h1>
+            <h1>{previous.slug}</h1>
+            <h1>{frontmatter.role}</h1>
             <p>{frontmatter.date}</p>
             <p>Duration: {frontmatter.startDate} - {frontmatter.endDate}</p>
             <article><MDXRenderer>{body}</MDXRenderer></article>
-            {previous === false ? null : (
+            <div className="flex flex-col md:flex-row justify-between">
+            {(previous==false) ? <span className="not-sr-only"></span> : (
                 <>
                 {previous && (
-                    <Link to={`/${previous.slug}`}>
-                        <button>{previous.frontmatter.title}</button>
+                    <Link className="my-3 p-1 text-lg duration-150 transform hover:scale-105 inline-block" style={{border:'1px solid var(--color-gray700)'}} to={`/${previous.slug}`}>
+                        <button><BsArrowLeft className="inline-block"/>{previous.frontmatter.role}</button>                        
                     </Link>
                 )}
                 </>
             )}
-            {next === false ? null : (
+            {next == false ? <span className="not-sr-only"></span> : (
                 <>
                 {next && (
-                    <Link to={`/${next.slug}`}>
-                        <button>{next.frontmatter.title}</button>
+                    <Link className="my-3 p-1 text-lg duration-150 transform hover:scale-105 inline-block" style={{border:'1px solid var(--color-gray700)'}} to={`/${next.slug}`}>
+                        {next.frontmatter.role}<BsArrowRight className="inline-block"/>
                     </Link>
                 )}
                 </>
             )}
+            </div>
         </>
     )
 };
@@ -40,7 +43,7 @@ query PostsByExp($slug:String){
     mdx(slug:{eq:$slug}){
         body
         frontmatter{
-            title
+            role
             date(formatString:"Do MMMM YYYY")
             startDate(formatString:"Do MMMM YYYY")
             endDate(formatString:"Do MMMM YYYY")

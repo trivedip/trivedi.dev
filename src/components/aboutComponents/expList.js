@@ -10,12 +10,11 @@ const ExpList = ()=>{
                   nodes {
                     slug
                     frontmatter {
-                      date(formatString: "DD MMMM YYYY")
-                      startDate(formatString: "DD MMMM YYYY")
-                      endDate(formatString: "DD MMMM YYYY")
+                      date(formatString: "MMMM YYYY")
+                      startDate(formatString: "MMMM YYYY")
+                      endDate(formatString: "MMMM YYYY")
                       description
                       published
-                      title
                       role
                       bullets
                       company

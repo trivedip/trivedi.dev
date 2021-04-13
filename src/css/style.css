@@ -185,7 +185,7 @@ body {
 .bg-blob{
     transform: scale(3);
     fill:var(--color-svg);
-    opacity: 0.2;
+    opacity: 0.1;
 }
 .img-container{
     transform:perspective(600px) rotateY(2deg) !important;
@@ -215,7 +215,8 @@ body {
 
 @media (max-width: 768px) { 
     .bg-blob{
-        transform: scale(3);
+        transform: scale(1);
+        max-width: 100vw;
     }   
     .background-ele{
         display:none;

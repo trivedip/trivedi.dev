@@ -21,9 +21,6 @@ exports.createPages= async ({actions,graphql})=>{
             throw result.errors
         }
         const posts = result.data.allMdx.nodes;
-        console.log("------------------------");
-        console.log(posts.length);
-        console.log("------------------------");
         posts.forEach((post,index)=>{
             const previous = (index === 0) ? '' : posts[index-1] ;
             const next = (index === posts.length) ? '' :posts[index+1];
@@ -41,13 +38,13 @@ exports.createPages= async ({actions,graphql})=>{
 
     const about = await graphql(`{
         allMdx(
-            sort:{fields:[frontmatter___date],order:DESC}
+            sort:{fields:[frontmatter___startDate],order:DESC}
             filter: {frontmatter: {published: {eq: true}}, fileAbsolutePath: { regex: "/experience/"}}
         ){
             nodes{                
                 slug                
                 frontmatter{
-                   title 
+                   role 
                 }
             }
         }
