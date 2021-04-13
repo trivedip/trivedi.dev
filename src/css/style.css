@@ -160,8 +160,9 @@ body {
     top:0;
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
+    /* overflow-x: hidden; */
+    /* overflow-y: visible; */
+    overflow: hidden;
     z-index:-1;
 }
 
@@ -170,7 +171,7 @@ body {
     width: 60px;
     height: 100px;
     background-color:var(--color-svg);
-    bottom:calc(60vh);
+    bottom:calc(60%);
     left:calc(5vw);
     transform:rotate(45deg);
     opacity:0.4;
@@ -179,8 +180,8 @@ body {
 .bg-blob-span{
     animation: turn 30s linear infinite;
     position: absolute;
-    top: calc(-70vh); 
-    left: 25vw;   
+    top: calc(-90%); 
+    left: 25%;   
 }
 .bg-blob{
     transform: scale(4);

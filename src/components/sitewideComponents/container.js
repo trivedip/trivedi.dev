@@ -10,7 +10,7 @@ const Container =({children}) => {
     return (
         <ThemeProvider>
             <GlobalStyles />   
-            <Background/>
+            {/* <Background/> */}
             <div className="">
             <Header className="max-w-screen-xl mx-auto"/>
             <div className="m-auto px-3 md:px-5 mt-16 sm:px-12 md:px-20 max-w-screen-xl">

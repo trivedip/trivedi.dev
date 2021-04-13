@@ -1,14 +1,16 @@
 import React from 'react';
 // import { Link,graphql } from "gatsby";
+import { graphql } from "gatsby";
 import AboutExpList from '../components/aboutComponents/aboutExpList';
-
+import SEO from "../components/sitewideComponents/seo";
 import AboutHeader from '../components/aboutComponents/aboutHeader';
 
 
-const About = () => {
-  
+const About = ({data}) => {
+    const siteDescription = data.site.siteMetadata.description;
     return(
         <>
+        <SEO title="About Me" description={siteDescription}/>      
           <AboutHeader/>
           <AboutExpList/>
         </>
@@ -17,4 +19,26 @@ const About = () => {
 };
 
 export default About;
+export const pageQuery = graphql`
+{
+    site {
+        siteMetadata {
+          description
+          title
+        }
+    }
+    allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
+        nodes {
+          slug
+          frontmatter {
+            date(formatString: "DD MMMM YYYY")
+            description
+            published
+            title
+          }
+        }
+      }
+    
+    }
+`;
 

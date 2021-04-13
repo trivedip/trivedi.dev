@@ -49,7 +49,7 @@ export const COLORS = {
       dark:'#cafdff73'
     },
     blocks:{
-      light:'#f9fafb',
+      light:'#f4f4f4',
       dark:'#131a1fab'
     }
     
