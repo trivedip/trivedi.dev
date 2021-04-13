@@ -25,8 +25,10 @@ const Background =()=>{
     }
     useEffect(() =>setLoaded(true))
     return(<>
+    
         {loaded?
-         <div className="page-background">
+        <div className="relative z-0">
+         <div className="page-background ">
                 {accssBdy()}
                 {/* <div className="background-ele"></div> */}
 
@@ -35,7 +37,9 @@ const Background =()=>{
                 </span>
                 <animated.div style={{transform: prop.xy.interpolate(trans4) }}  className="background-ele"></animated.div>
         </div> 
+        </div>
         :null}
+    
     </>)
 };
 

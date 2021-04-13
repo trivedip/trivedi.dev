@@ -156,13 +156,13 @@ body {
 }
 
 .page-background{
-    position:absolute;
+    position:relative;
     top:0;
     width: 100%;
     min-height: 100%;
     /* overflow-x: hidden; */
     /* overflow-y: visible; */
-    overflow: hidden;
+    overflow: visible;
     z-index:-1;
 }
 
@@ -181,10 +181,10 @@ body {
     animation: turn 30s linear infinite;
     position: absolute;
     top: calc(-90%); 
-    left: 25%;   
+    left: -10%;   
 }
 .bg-blob{
-    transform: scale(4);
+    transform: scale(3);
     opacity: 0.4;
     fill:var(--color-svg);
 }
