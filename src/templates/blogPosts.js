@@ -2,11 +2,8 @@ import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
 const blogPosts = (data) =>{
-    const {body,frontmatter} = data.data.mdx; 
-    
+    const {body,frontmatter} = data.data.mdx;     
     const {previous,next} = data.pageContext;
-    console.log(previous);
-    console.log(next);
     return (
         <>
             <h1>{frontmatter.title}</h1>

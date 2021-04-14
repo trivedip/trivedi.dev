@@ -1,16 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-    font-family: 'bariolregular';
-    src: local('bariolregular'), url(../pages/assets/fonts/bariol_regular-webfont.woff2) format('woff2');
-  }
-@font-face {
-    font-family: 'bariolserif';
-    src: local('bariolserif'), url(../pages/assets/fonts/bariol_serif_regular-webfont.woff2) format('woff2');
-  }
-  
  
 *{
     font-family:"Open Sans", sans-serif;
