@@ -175,7 +175,9 @@ body {
     transform:rotate(45deg);
     opacity:0.2;
 }
-
+.z-fix{
+    z-index: -1;
+}
 .bg-blob-span{
     animation: turn 30s linear infinite;
     position: absolute;
@@ -185,7 +187,7 @@ body {
 .bg-blob{
     transform: scale(3);
     fill:var(--color-svg);
-    opacity: 0.1;
+    opacity: 0.2;
 }
 .img-container{
     transform:perspective(600px) rotateY(2deg) !important;

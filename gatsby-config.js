@@ -9,9 +9,11 @@ module.exports = {
       },
     plugins:[
         `gatsby-plugin-image`,
+        `gatsby-transformer-sharp`,
         `react-icons`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-postcss`,
+        `gatsby-transformer-remark`,
     {
         resolve: `gatsby-source-filesystem`,
         options: {

@@ -2,14 +2,15 @@ import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const expPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx; 
-    
+    const img = getImage(frontmatter.featuredImage)
     const {previous,next} = data.pageContext;  
-    console.log(previous) ;
     return (
         <>
             <h1>{previous.slug}</h1>
+            {img&&<GatsbyImage image={img}></GatsbyImage>}
             <h1>{frontmatter.role}</h1>
             <p>{frontmatter.date}</p>
             <p>Duration: {frontmatter.startDate} - {frontmatter.endDate}</p>
@@ -47,6 +48,14 @@ query PostsByExp($slug:String){
             date(formatString:"Do MMMM YYYY")
             startDate(formatString:"Do MMMM YYYY")
             endDate(formatString:"Do MMMM YYYY")
+            featuredImage {
+                childImageSharp {
+                    gatsbyImageData(
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                      )
+                }
+              }
         }
     }
 }
