@@ -1,9 +1,7 @@
 import React from 'react';
-import { StaticImage } from "gatsby-plugin-image";
 import {BsArrowDown} from 'react-icons/bs';
 import {BsArrowRight} from 'react-icons/bs';
 import { Link } from 'gatsby';
-import { IconContext } from "react-icons";
 
 const Hero =()=>{
     return(

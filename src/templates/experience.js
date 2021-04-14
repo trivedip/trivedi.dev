@@ -16,7 +16,7 @@ const expPosts = (data) =>{
             <p>Duration: {frontmatter.startDate} - {frontmatter.endDate}</p>
             <article><MDXRenderer>{body}</MDXRenderer></article>
             <div className="flex flex-col md:flex-row justify-between">
-            {(previous==false) ? <span className="not-sr-only"></span> : (
+            {(previous===false) ? <span className="not-sr-only"></span> : (
                 <>
                 {previous && (
                     <Link className="my-3 p-1 text-lg duration-150 transform hover:scale-105 inline-block" style={{border:'1px solid var(--color-gray700)'}} to={`/${previous.slug}`}>
@@ -25,7 +25,7 @@ const expPosts = (data) =>{
                 )}
                 </>
             )}
-            {next == false ? <span className="not-sr-only"></span> : (
+            {next === false ? <span className="not-sr-only"></span> : (
                 <>
                 {next && (
                     <Link className="my-3 p-1 text-lg duration-150 transform hover:scale-105 inline-block" style={{border:'1px solid var(--color-gray700)'}} to={`/${next.slug}`}>

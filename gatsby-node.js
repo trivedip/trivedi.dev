@@ -22,8 +22,8 @@ exports.createPages= async ({actions,graphql})=>{
         }
         const posts = result.data.allMdx.nodes;
         posts.forEach((post,index)=>{
-            const previous = (index === 0) ? '' : posts[index-1] ;
-            const next = (index === posts.length) ? '' :posts[index+1];
+            const previous = (index === 0) ? false : posts[index-1] ;
+            const next = (index === posts.length) ? false :posts[index+1];
             createPage({
                 path:post.slug,
                 component: blogPostTemplate,
@@ -54,8 +54,8 @@ exports.createPages= async ({actions,graphql})=>{
         }
         const jobs = result.data.allMdx.nodes;
         jobs.forEach((job,index)=>{
-            const previous = (index === 0) ? '' : jobs[index-1] ;
-            const next = (index === jobs.length) ? '' :jobs[index+1];
+            const previous = (index === 0) ? false : jobs[index-1] ;
+            const next = (index === jobs.length) ?false :jobs[index+1];
             createPage({
                 path:job.slug,
                 component: expPostTemplate,
@@ -82,3 +82,11 @@ exports.onCreateNode = ({node,getNode, actions})=>{
         });
     }
 };
+
+// exports.onCreateWebpackConfig = ({ actions }) => {
+//     actions.setWebpackConfig({
+//       resolve: {
+//         modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+//       },
+//     })
+//   }

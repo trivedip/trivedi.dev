@@ -6,11 +6,10 @@ import {BiAdjust} from 'react-icons/bi';
 
 const DarkToggle = (props) => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);
-  const [isActive,setActive] = useState('dark');
+
   if (!colorMode) {
     return null;
   }
-  console.log(props.prop);
   const toggleClass =(ev)=>{
     if (colorMode==='light'){
       ev.target.classList.remove('light');
