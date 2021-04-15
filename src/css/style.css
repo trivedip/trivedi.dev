@@ -30,6 +30,10 @@ body {
     text-decoration: none;
 }
 
+.tester{
+    max-height: calc(60vh - 4rem) !important;
+}
+
 .card:hover{
     cursor:pointer;
     text-decoration: none;

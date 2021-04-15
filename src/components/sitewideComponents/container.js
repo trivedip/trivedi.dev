@@ -13,7 +13,7 @@ const Container =({children}) => {
             <Background/>
             <div className="relative z-30">
             <Header/>
-            <div className="m-auto mt-16">
+            <div className="m-auto mt-8">
                 <div className="flex-grow">
                     {children}
                 </div>

@@ -4,14 +4,20 @@ import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const expPosts = (data) =>{
-    const {body,frontmatter} = data.data.mdx; 
-    const img = getImage(frontmatter.featuredImage.childImageSharp.fluid)
+    // console.log(data.data.allMdx.nodes[0]);
+    const {body,frontmatter} = data.data.allMdx.nodes[0]; 
+    
+    const img = getImage(frontmatter.featuredImage)
+    console.log(frontmatter.featuredImage.childImageSharp);
     const {previous,next} = data.pageContext;  
     return (
         <>
-            {img&&<GatsbyImage layouts="fullWidth" image={img}></GatsbyImage>}
+            {img && 
+            <div>
+            <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
+            </div>}
             <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">
-                <h1>{previous.slug}</h1>
+                {previous.slug&& <h1>{previous.slug}</h1>}
                 <h1>{frontmatter.role}</h1>
                 <p>{frontmatter.date}</p>
                 <p>Duration: {frontmatter.startDate} - {frontmatter.endDate}</p>
@@ -43,23 +49,25 @@ const expPosts = (data) =>{
 export default expPosts;
 export const pageQuery = graphql`
 query PostsByExp($slug:String){
-    mdx(slug:{eq:$slug}){
-        body
-        frontmatter{
-            role
-            date(formatString:"Do MMMM YYYY")
-            startDate(formatString:"Do MMMM YYYY")
-            endDate(formatString:"Do MMMM YYYY")
-            featuredImage {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+        allMdx(filter: {slug: {eq:$slug}}){
+            nodes {
+                body
+                frontmatter {
+                  endDate
+                  startDate
+                  role
+                  featuredImage {
+                    childImageSharp {                      
+                      gatsbyImageData(
+                          height:500
+                          layout: FULL_WIDTH
+                        )
+                    }
+                  }       
+                }      
               }
         }
     }
-}
 `;
 
 // query PostsByExp($slug:String){
@@ -74,6 +82,7 @@ query PostsByExp($slug:String){
 //                 childImageSharp {
 //                     gatsbyImageData(
 //                         placeholder: BLURRED
+                            
 //                         formats: [AUTO, WEBP, AVIF]
 //                       )
 //                 }
