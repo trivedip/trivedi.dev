@@ -10,10 +10,12 @@ const About = ({data}) => {
     const siteDescription = data.site.siteMetadata.description;
     return(
         <>
-        <SEO title="About Me" description={siteDescription}/>      
-          {/* <AboutHeader/> */}
-          <Test/>
+        <SEO title="About Me" description={siteDescription}/> 
+        <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">
+          <AboutHeader/>
+          {/* <Test/> */}
           <AboutExpList/>
+        </div>     
         </>
     );
     

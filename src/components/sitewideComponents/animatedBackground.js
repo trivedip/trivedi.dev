@@ -1,7 +1,6 @@
 import React from 'react';
 import {useSpring, animated } from 'react-spring';
 import ReactDOM from 'react-dom';
-import { ThemeContext } from '../ThemeContext';
 import { useState, useEffect } from 'react';
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans4 = (x, y) => `translate3d(${x / 50}px,${y / 50}px,0)`;
@@ -11,19 +10,19 @@ const Background =()=>{
     const [loaded,setLoaded]=useState(false);
     const [prop, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 5, tension: 200, friction: 40 } }));
     
-    const props = useSpring({
-        to:{opacity: 0.4, bottom:200, width:40, transform: 'rotateZ(40deg)'},
-        from: {opacity: 0,bottom:100, width:20, transform: 'rotateZ(0deg)'},
-        config:{ mass: 2,
-            tension: 100,
-            friction: 10}});
+    // const props = useSpring({
+    //     to:{opacity: 0.4, bottom:200, width:40, transform: 'rotateZ(40deg)'},
+    //     from: {opacity: 0,bottom:100, width:20, transform: 'rotateZ(0deg)'},
+    //     config:{ mass: 2,
+    //         tension: 100,
+    //         friction: 10}});
     
     const accssBdy = ()=>{
         ReactDOM.findDOMNode(document.body).addEventListener('mousemove',e=>{
             set({ xy: calc(e.offsetX, e.offsetY) })}
         );
     }
-    useEffect(() =>setLoaded(true))
+    useEffect(() =>setLoaded(true),[])
     return(<>
     
         {loaded?

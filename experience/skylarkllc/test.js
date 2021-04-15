@@ -9,8 +9,11 @@ const Test =(props)=>{
           <div className="self-center overflow-visible img-container shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'33%',flexShrink:'1'}} >
           {/* <div className="self-center overflow-visible img-container shadow-xl bg-blue"> */}
               {/* <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src={'../../images/prof1.jpg'}></StaticImage>               */}
-              <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src={'./img.jpg'}></StaticImage>              
+              <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src="../../src/blogAssets/images/prof1.jpg"></StaticImage>   
+                         
+              {/* <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src={'../../src/pages/assets/image/prof1.jpg'}></StaticImage>               */}
           </div> 
+          
           
           {/* <div className="justify-end" > */}
           <div className="justify-end" style={{flexBasis:'66%',flexShrink:'1'}} >

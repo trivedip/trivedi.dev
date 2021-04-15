@@ -2,16 +2,18 @@ import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 import {BsDownload} from 'react-icons/bs';
 import {VscFilePdf} from 'react-icons/Vsc';
-const AboutHeader =()=>{
+const LeftImg =()=>{
     return(
         <>        
         <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30" >          
-          <div className="self-center overflow-visible img-container shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'33%',flexShrink:'1'}} >
+          <div className="self-center overflow-visible img-container shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'45%',flexShrink:'1'}} >
           {/* <div className="self-center overflow-visible img-container shadow-xl bg-blue"> */}
-              <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>              
+              {/* <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>               */}
+              <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src={'./prof1.jpg'}></StaticImage> 
+                           
           </div> 
           {/* <div className="justify-end" > */}
-          <div className="justify-end" style={{flexBasis:'66%',flexShrink:'1'}} >
+          <div className="justify-end" style={{flexBasis:'55%',flexShrink:'1'}} >
             <div className="flex flex-col md:ml-20 text-xl justify-end">
               <h1 className="text-3xl mb-5 uppercase tracking-widest">About Me</h1>
               <div className="justify-end ">I’m a Texas State University Master of Computer Science Graduate. I’m a programmer, designer and a big-time foodie. I was born in the small town of India, where I pursued my bachelor’s degree. I currently dwell in beautiful city of San Marcos, Texas. I am curious and motivated to learn new skills and apply it to new projects. If anything, new gets caught up in my eye, I always unravel and try to come up with innovative and improved ideas. 
@@ -30,4 +32,4 @@ const AboutHeader =()=>{
     );
 };
 
-export default AboutHeader;
+export default LeftImg;
