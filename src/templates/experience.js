@@ -38,12 +38,12 @@ const expPosts = (data) =>{
                     </div>
                     <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col shadow-none md:shadow-inner bg-dark-blue ">
                         <div className="uppercase tracking-widest text-sm underline py-2 pl-5">Duration</div>   
-                        <div className="inline-block"><div className="px-5">{frontmatter.startDate} - {frontmatter.endDate}</div></div>
+                        <div className="inline-block"><div className="px-5">{frontmatter.startDate} - {frontmatter.endDate ? frontmatter.endDate : 'Present'}</div></div>
                         
                     </div>
                 </span>
                 {previous.slug&& <h1>{previous.slug}</h1>}
-                <article><MDXRenderer>{body}</MDXRenderer></article>
+                <article><MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer></article>
                 <div className="flex flex-col md:flex-row justify-between">
                 {(previous===false) ? <span className="not-sr-only"></span> : (
                     <>
@@ -79,6 +79,7 @@ query PostsByExp($slug:String){
                   startDate(formatString: "MMMM YYYY")
                   role
                   technology
+                  bullets
                   featuredImage {
                     childImageSharp {                      
                       gatsbyImageData(
