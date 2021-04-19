@@ -3,6 +3,10 @@ export const COLORS = {
       light: 'hsl(0deg, 0%, 10%)', // white
       dark: 'hsl(0deg, 0%, 100%)', // near-black
     },
+    textInv: {
+      light: 'white', // white
+      dark: 'white', // near-black
+    },
     background: {
       light: 'hsl(0deg, 0%, 100%)', // white
       dark: '#091a28e0', // navy navy blue
@@ -38,6 +42,10 @@ export const COLORS = {
     },
     eleBlue:{
       light:'#bbd9f1ab',
+      dark:'#131a1fab'
+    },
+    eleDarkBlue:{
+      light:'#4383b2ed',
       dark:'#131a1fab'
     },
     bgpills:{

@@ -8,11 +8,13 @@ import SEO from "../components/sitewideComponents/seo";
 const Home = ({data}) => {
     const siteDescription = data.site.siteMetadata.description;
     return(
-        <>  
+        <>        
           <SEO title="Home" description={siteDescription}/>      
+          <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">
           <Hero/>          
           <LatestBlog/>
           <Experience/>
+          </div>
         </>
     );
     

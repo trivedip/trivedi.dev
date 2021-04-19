@@ -13,6 +13,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+    width: 100%;
 }
 
 ::selection{
@@ -150,7 +151,7 @@ body {
 }
 
 .page-background{
-    position:relative;
+    position:absolute;
     top:0;
     width: 100%;
     min-height: 100%;
@@ -158,19 +159,51 @@ body {
     /* overflow-y: visible; */
     overflow: visible;
 }
+.background-element-container{
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+}
 
 .background-ele{
-    position:absolute;
-    width: 60px;
-    height: 100px;
+    position:relative;
+    width: 30px;
+    height: 70px;
     background-color:var(--color-svg);
-    bottom:calc(60%);
-    left:calc(5vw);
+    left:10%;
+    top:calc(30%);
     transform:rotate(45deg);
     opacity:0.2;
 }
 .z-fix{
     z-index: -1;
+}
+.background-plus{
+    position: absolute;
+    width: 50px;
+    height: 75px;
+    right:15%;
+    top:calc(30%);
+    fill:var(--color-svg);
+    opacity: 0.5;
+}
+.background-plus-1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right:55%;
+    fill:var(--color-svg);
+    top:17%;
+    opacity: 0.5;
+}
+.background-plus-2{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right:55%;
+    fill:var(--color-svg);
+    top:50%;
+    opacity: 0.5;
 }
 .bg-blob-span{
     animation: turn 30s linear infinite;
@@ -189,6 +222,13 @@ body {
 
 .img{
     transform:perspective(600px) rotateY(4deg) translateX(6px) translateY(3px) !important;    
+}
+.img-container-right{
+    transform:perspective(600px) rotateY(-2deg) !important;
+}
+
+.img-right{
+    transform:perspective(600px) rotateY(-4deg) translateX(-6px) translateY(3px) !important;    
 }
 
 .gatsby-image-wrapper{
@@ -216,6 +256,13 @@ body {
     }   
     .background-ele{
         display:none;
+    }
+    .background-element-container{
+        display: none;
+    }
+    .bg-blob-span{
+        top: -30%; 
+        left: -30%;   
     }
     .menu-open{
         min-height: 40vh;
@@ -251,6 +298,11 @@ body {
 
 .bg-blue{
     background-color:var(--color-eleBlue);
+}
+
+.bg-dark-blue{
+    background-color:var(--color-eleDarkBlue);
+    color:var(--color-textInv);
 }
 
 

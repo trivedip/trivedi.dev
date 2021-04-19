@@ -14,7 +14,7 @@ const RecentExperience = () => {
                   date(formatString: "DD MMMM YYYY")
                   description
                   published
-                  title
+                  role
                 }
               }
             }
@@ -27,10 +27,10 @@ const RecentExperience = () => {
             return(
             <>     
             <Link to={`/${post.slug}`}>
-            <div className="py-5 px-5 rounded hover:bg-gray-600 hover:text-gray-50">
-                <span className="flex py-1.5 rounded" >
-                    <div className="w-5/6">{post.frontmatter.title}</div>
-                    <div className="w-1/6 ml-auto flex justify-end">{post.frontmatter.date}</div>
+            <div className="p-3 md:p-5 my-3 md:my-5 rounded hover:bg-gray-600 hover:text-gray-50">
+                <span className="flex flex-col md:flex-row pt-1.5 rounded" >
+                    <div className="font-semibold text-lg">{post.frontmatter.role}</div>
+                    <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.date}</div>
                 </span>
                 <div>
                     {post.frontmatter.description}
