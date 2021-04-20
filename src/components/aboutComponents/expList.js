@@ -32,8 +32,8 @@ const ExpList = ()=>{
                 
                 return(
                 <>                 
-                {/* <Link to={`/${post.slug}`} key={post.slug}> */}
-                <div key={post.slug}>
+                <Link to={`/${post.slug}`} key={post.slug}>
+                {/* <div key={post.slug}> */}
                 <div className="p-3 md:p-5 my-3 md:my-5 rounded shadow hover:bg-gray-600 hover:text-gray-50 blocks-bg">
                     <span className="flex flex-col md:flex-row pt-1.5 rounded" >
                         <div className="font-semibold text-lg">{post.frontmatter.role}</div>
@@ -67,7 +67,8 @@ const ExpList = ()=>{
                             :''}
                     </div>
                 </div>
-                </div>             
+                {/* </div>   */}
+                </Link>           
                 </>
                 )
             })        
