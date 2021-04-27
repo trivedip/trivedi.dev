@@ -14,7 +14,11 @@ const AboutHeader =()=>{
           <div className="justify-end" style={{flexBasis:'66%',flexShrink:'1'}} >
             <div className="flex flex-col md:ml-20 text-xl justify-end">
               <h1 className="text-3xl mb-5 uppercase tracking-widest">About Me</h1>
-              <div className="justify-end ">I’m a Master of Computer Science Graduate. I’m a programmer, designer and a big-time foodie. I was born in the small town of India, where I pursued my bachelor’s degree. I currently dwell in beautiful city of San Marcos, Texas. I am curious and motivated to learn new skills and apply it to new projects. If anything, new gets caught up in my eye, I always unravel and try to come up with innovative and improved ideas. 
+              <div className="justify-end ">Hi I am Priyank, I’m a Master of Computer Science Graduate. I’m a programmer, designer and a big-time foodie. 
+              I was born in the small town of India, where I pursued my bachelor’s degree. 
+              I currently dwell in beautiful city of San Marcos, Texas. 
+              I am curious and motivated to learn new skills and apply it to new projects. --- Add bio-informatics
+              If anything,___WHAT____, I always unravel and try to come up with innovative and improved ideas. 
               <br/>
               <br/>
               Thank you for taking the time to get to know a little bit about me. If you have some ideas, to discuss I am always happy to chat in person over coffee. Feel free to contact me via email at:priyank_at_trivedip.com

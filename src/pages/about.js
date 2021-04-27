@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import AboutExpList from '../components/aboutComponents/aboutExpList';
 import SEO from "../components/sitewideComponents/seo";
 import AboutHeader from '../components/aboutComponents/aboutHeader';
-import Test from '../../experience/skylarkllc/test';
 
 const About = ({data}) => {
     const siteDescription = data.site.siteMetadata.description;
