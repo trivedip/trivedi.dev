@@ -42,7 +42,6 @@ const expPosts = (data) =>{
                         
                     </div>
                 </span>
-                {previous.slug&& <h1>{previous.slug}</h1>}
                 <article><MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer></article>
                 <div className="flex flex-col md:flex-row justify-between">
                 {(previous===false) ? <span className="not-sr-only"></span> : (

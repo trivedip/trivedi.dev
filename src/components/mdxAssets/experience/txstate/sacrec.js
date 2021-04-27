@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const SaCrec =()=>{
     return(
         <> 
+          
           <div className="flex w-full mt-8 md:mt-10 text-xl uppercase tracking-widest mb-3">Campus Rec. dashboard</div>   
           <span className="flex flex-col-reverse md:flex-row md:space-y-0 flex-wrap relative z-30 mb-5" >                    
             {/* <div className="justify-end" > */}            
