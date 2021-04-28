@@ -8,11 +8,11 @@ import {BiAdjust} from 'react-icons/bi';
 
 const DarkToggle = (props) => {
   const { colorMode, setColorMode } = React.useContext(ThemeContext);
-  const onKeyDownHandler = () =>{
-    alert("Hello");
-    // if (e.keyCode === 13) {
-    //   toggleClass(e);
-    // }
+  const onKeyDownHandler = (ev) =>{
+    console.log(ev);
+    if (ev.keyCode === 13) {
+      toggleClass(ev);
+    }
   };  
 
   if (!colorMode) {
@@ -33,9 +33,9 @@ const DarkToggle = (props) => {
 
 
   return (
-      <button className="sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125 lst">
+      <button onKeyDown={(ev)=> onKeyDownHandler(ev)} className="sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125 lst">
         <div className="sr-only">Toggle dark mode</div>
-        <BiAdjust onClick={(ev)=>{toggleClass(ev);}} onKeyDown={this.onKeyDownHandler} size="" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150" tabIndex="0"/>     
+        <BiAdjust onClick={(ev)=>{toggleClass(ev)}}  size="" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150" tabIndex="0"/>     
       </button>
   );
 };
