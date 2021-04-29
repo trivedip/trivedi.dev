@@ -2,16 +2,19 @@ import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import SEO from '../components/sitewideComponents/seo';
+
 const expPosts = (data) =>{
     // console.log(data.data.allMdx.nodes[0]);
     const {body,frontmatter} = data.data.allMdx.nodes[0]; 
-    
+    const siteDescription = data.data.site.siteMetadata.description;
     const img = getImage(frontmatter.featuredImage)
     console.log(frontmatter.featuredImage.childImageSharp);
     const {previous,next} = data.pageContext;  
     return (
         <>
+            <SEO title="About Me" description={siteDescription}/> 
             {/* {img && 
             <div>
             <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
@@ -70,6 +73,12 @@ const expPosts = (data) =>{
 export default expPosts;
 export const pageQuery = graphql`
 query PostsByExp($slug:String){
+        site {
+            siteMetadata {
+            description
+            title
+            }
+        }
         allMdx(filter: {slug: {eq:$slug}}){
             nodes {
                 body
