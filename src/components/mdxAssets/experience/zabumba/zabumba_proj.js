@@ -11,8 +11,10 @@ const ZabumbaProj =()=>{
               <div className="justify-end" style={{flexBasis:'55%',flexShrink:'1'}} >
                 <div className="flex flex-col md:mr-20 text-xl justify-end">
                   <div className="justify-end ">
-                  My role initially at TrackMyShuttle was mainly to develop Machine Learning algorithm for accurate ETA calculations and generate visualization tool for geo coordinate data as well as metadata.
-                  I successfully developed a prototype for displaying real-time data from vehicles GPS and displaying it on PHP based portal with route information and ETA.                   
+                  I joined Zabumba early on when the product was in early prototyping phase, the development team consisted of me and a senior developer. Due to limited number of developers available my role here extended from back-end development to front end UI/UX designing.
+                  <br/><br/>
+                  Majority of development was done in core PHP and vanilla JavaScript, I also utilized my knowledge of Adobe photoshop & Illustrator for designing and developing layouts.
+ 
                   </div>              
                 </div>
               </div>          
@@ -22,7 +24,7 @@ const ZabumbaProj =()=>{
                         <source src={Loop}  type="video/mp4" />
                     </video>
                 </div> 
-                <span className="text-sm flex w-full justify-center">TrackMyShuttle landing animation</span>
+                <span className="text-sm flex w-full justify-center">Zabumba landing page</span>
               </div>              
           </span>        
       </>

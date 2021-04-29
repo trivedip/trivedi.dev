@@ -20,7 +20,7 @@ const GraBioSignal =()=>{
               <br/><br/>
               My role was to create a method to collect bio-signal data while participants are experiencing stressors (crowded environments in VR, questions which might cause stress in interview). I successfully collected bio-signals which included ECG, GSR, Pulse oximeter, Thermal Imaging, Respiratory rate from over 40 participants.  
               <br/><br/>
-After collecting and cleaning the data I also tried to apply different machine learning approaches to the data including traditional machine learning techniques with feature extraction and deep learning using TensorFlow. 
+              After collecting and cleaning the data I also tried to apply different machine learning approaches to the data including traditional machine learning techniques with feature extraction and deep learning using TensorFlow. 
               <br/>
               
               </div>              

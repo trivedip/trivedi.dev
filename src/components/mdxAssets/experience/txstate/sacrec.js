@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
+import Loop from './crec.mp4';
 const SaCrec =()=>{
     return(
         <> 
@@ -19,9 +20,12 @@ const SaCrec =()=>{
               </div>  
               <div className="self-center overflow-visible flex-shrink z-30 justify-center" style={{flexBasis:'45%',flexShrink:'1'}}>
               <div className="img-container-right shadow-xl bg-blue flex-shrink z-30" >          
-                  <StaticImage imgClassName="img-right shadow-xl z-30" placeholder="tracedSVG" src={'./crec.jpeg'}></StaticImage>                            
+                  {/* <StaticImage imgClassName="img-right shadow-xl z-30" placeholder="tracedSVG" src={'./crec.jpeg'}></StaticImage>                             */}
+                  <video muted="true" loop="true" autoplay="true" className="img-right shadow-xl">
+                        <source src={Loop}  type="video/mp4" />
+                    </video>
               </div> 
-              <span className="text-sm flex w-full justify-center">Screenshot - CREC Dashboard</span>
+              <span className="text-sm flex w-full justify-center">Screen Capture - CREC Dashboard</span>
               </div>        
           </span>        
       </>
