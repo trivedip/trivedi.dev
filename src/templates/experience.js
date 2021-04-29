@@ -6,7 +6,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SEO from '../components/sitewideComponents/seo';
 
 const expPosts = (data) =>{
-    // console.log(data.data.allMdx.nodes[0]);
     const {body,frontmatter} = data.data.allMdx.nodes[0]; 
     const siteDescription = data.data.site.siteMetadata.description;
     const img = getImage(frontmatter.featuredImage)
@@ -91,7 +90,6 @@ query PostsByExp($slug:String){
                   featuredImage {
                     childImageSharp {                      
                       gatsbyImageData(
-                          height:500
                           layout: FULL_WIDTH
                         )
                     }
