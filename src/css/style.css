@@ -220,6 +220,7 @@ body {
     transform:perspective(600px) rotateY(2deg) !important;
 }
 
+
 .img{
     transform:perspective(600px) rotateY(4deg) translateX(6px) translateY(3px) !important;    
 }
@@ -310,11 +311,21 @@ body {
     background: var(--color-blocks);
 }
 
+.blocks-bg:hover{
+    background: #00507A;
+}
+
+
 .bg-pills{
     background-color:var(--color-bgpills);
 }
 
 .blocks-bg:hover .bg-pills{
+    background-color:white;
+    color:black;
+}
+
+.blocks-bg:hover .bg-blue{
     background-color:white;
     color:black;
 }

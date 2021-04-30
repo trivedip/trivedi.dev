@@ -45,7 +45,7 @@ export const COLORS = {
       dark:'#131a1fab'
     },
     eleDarkBlue:{
-      light:'#4383b2ed',
+      light:'#00507A',
       dark:'#131a1fab'
     },
     bgpills:{

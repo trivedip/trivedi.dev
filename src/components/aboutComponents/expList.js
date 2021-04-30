@@ -34,7 +34,7 @@ const ExpList = ()=>{
                 <>                 
                 <Link to={`/${post.slug}`} key={post.slug}>
                 {/* <div key={post.slug}> */}
-                <div className="p-3 md:p-5 my-3 md:my-5 rounded shadow hover:bg-gray-600 hover:text-gray-50 blocks-bg">
+                <div className="p-3 md:p-5 my-3 md:my-5 rounded shadow hover:text-gray-50 blocks-bg">
                     <span className="flex flex-col md:flex-row pt-1.5 rounded" >
                         <div className="font-semibold text-lg">{post.frontmatter.role}<span className="ml-1 md:ml-2 py-1 px-2 text-xs rounded-full shadow-inner bg-pills">{post.frontmatter.type}</span></div>
                         <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate ? post.frontmatter.endDate : 'Present'}</div>

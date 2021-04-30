@@ -5,7 +5,7 @@ const pages =[
         to:"/",
         name:"Home",
         ariaLabel:"Go to homepage of the website",
-        active:true,  
+        active:false,  
 
     },
     {
@@ -13,7 +13,7 @@ const pages =[
         to:"/blog/",
         name:"Blog",
         ariaLabel:"Blog",
-        active:true,
+        active:false,
     },
     {
         id:2,

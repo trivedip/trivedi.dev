@@ -3,14 +3,11 @@ import { Link,graphql } from "gatsby";
 
 
 const Blog = ({data}) => {
-    // console.log(data.site);
-    // const siteTitle=  data.site.siteMetadata.title;
-    // const siteDescription = data.site.siteMetadata.description;
+
     const post = data.allMdx.nodes;
-    // return(<h1>Hello</h1>);
     return(
         <>
-        <div style={{zIndex:1}}>
+        <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl" style={{zIndex:1}}>
         <h1>Recent Post</h1>
         {post.map((pst)=>{
             const title = pst.frontmatter.title;

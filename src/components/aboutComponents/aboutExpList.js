@@ -29,6 +29,7 @@ const AboutExpList = ()=>{
     return(
         <>
         <section className="flex flex-col mt-5 md:mt-10 z-30">
+        <div className="uppercase tracking-widest text-2xl font-medium py-5 pl-5">Software Skills</div>   
         <span className="flex md:space-x-5 flex-col md:flex-row">
             <div className="rounded p-3 flex-1 flex flex-col justify-evenly bg-blue shadow-none md:shadow">
                 <div className="uppercase tracking-widest text-sm underline pt-2 pl-5 ">Education</div>
