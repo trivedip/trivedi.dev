@@ -18,7 +18,7 @@ const pages =[
     {
         id:2,
         to:"/about/",
-        name:"About Me",
+        name:"About",
         ariaLabel:"About Priyank Trivedi",
         active:true,    
     },

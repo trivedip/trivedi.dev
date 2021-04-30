@@ -1,7 +1,15 @@
 export const COLORS = {
     text: {
-      light: 'hsl(0deg, 0%, 10%)', // white
-      dark: 'hsl(0deg, 0%, 100%)', // near-black
+      light: '#666666', // white
+      dark: '#c8c8c8', // near-black
+    },
+    textHeaders: {
+      light: '#22716a', // white
+      dark: '#24bfb0', // near-black
+    },
+    textBright: {
+      light: 'black', // white
+      dark: 'white', // near-black
     },
     textInv: {
       light: 'white', // white
@@ -9,7 +17,7 @@ export const COLORS = {
     },
     background: {
       light: 'hsl(0deg, 0%, 100%)', // white
-      dark: '#091a28e0', // navy navy blue
+      dark: '#292929', // navy navy blue
     },
     primary: {
       light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
@@ -21,7 +29,11 @@ export const COLORS = {
     },
     svg:{
       light:'#83abcac7',
-      dark:'#010305e0',
+      dark:'white',
+    },
+    svgBackgroundBlob:{
+      light:'#83abcac7',
+      dark:'#e6e6e64a',
     },
     // Grays, scaling from least-noticeable to most-noticeable
     gray300: {
@@ -50,15 +62,15 @@ export const COLORS = {
     },
     bgpills:{
       light:'#6de6b6',
-      dark:'#4fb18a'
+      dark:'#3e8a6c'
     },    
     selection:{
       light:'#457b9482',
       dark:'#cafdff73'
     },
     blocks:{
-      light:'#f4f4f4',
-      dark:'#131a1fab'
+      light:'#f4f4f4a1',
+      dark:'#213d52bf'
     }
     
   };

@@ -116,6 +116,7 @@ body {
     /* background-color:black; */
     border-bottom:2px solid var(--color-text);
     border-radius: 0px;
+    color:var(--color-textHeaders);
 } 
 
 .active::before{
@@ -174,6 +175,7 @@ body {
     top:calc(30%);
     transform:rotate(45deg);
     opacity:0.2;
+    
 }
 .z-fix{
     z-index: -1;
@@ -186,6 +188,7 @@ body {
     top:calc(30%);
     fill:var(--color-svg);
     opacity: 0.5;
+    transition: fill 500ms ease-in;
 }
 .background-plus-1{
     position: absolute;
@@ -195,6 +198,7 @@ body {
     fill:var(--color-svg);
     top:17%;
     opacity: 0.5;
+    transition: fill 500ms ease-in;
 }
 .background-plus-2{
     position: absolute;
@@ -204,6 +208,7 @@ body {
     fill:var(--color-svg);
     top:50%;
     opacity: 0.5;
+    transition: fill 500ms ease-in;
 }
 .bg-blob-span{
     animation: turn 30s linear infinite;
@@ -213,8 +218,9 @@ body {
 }
 .bg-blob{
     transform: scale(3);
-    fill:var(--color-svg);
+    fill:var(--color-svgBackgroundBlob);
     opacity: 0.2;
+    transition: fill 800ms ease-in;
 }
 .img-container{
     transform:perspective(600px) rotateY(2deg) !important;
@@ -242,6 +248,17 @@ body {
 
 .fixer{
     height: unset important;
+}
+
+p{
+    display: inline-block;
+    font-size: 1.30rem;
+    font-weight: 500;
+    color: #34a99e;
+}
+
+.header{
+    color:var(--color-textHeaders);
 }
 
 @media (min-width: 768px) { 
@@ -318,6 +335,11 @@ body {
 
 .bg-pills{
     background-color:var(--color-bgpills);
+    color:var(--color-textBright);
+}
+
+.bright{
+    color:var(--color-textBright);
 }
 
 .blocks-bg:hover .bg-pills{
