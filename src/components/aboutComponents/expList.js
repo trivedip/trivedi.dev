@@ -34,9 +34,10 @@ const ExpList = ()=>{
                 <>                 
                 <Link to={`/${post.slug}`} key={post.slug}>
                 {/* <div key={post.slug}> */}
-                <div className="p-3 md:p-5 mb-3 md:mb-5 rounded shadow hover:text-gray-50 blocks-bg">
+                <div className="p-3 md:p-5 mb-3 md:mb-5 hover:text-gray-50 blocks-bg relative">
+                <div className="click-me shadow-inner bg-pills-sec">Click for more details</div>
                     <span className="flex flex-col md:flex-row pt-1.5 rounded" >
-                        <div className="font-semibold text-lg">{post.frontmatter.role}<span className="ml-1 md:ml-2 py-1 px-2 text-xs rounded-full shadow-inner bg-pills">{post.frontmatter.type}</span></div>
+                        <div className="font-semibold text-lg"><div className="inline-block bright">{post.frontmatter.role}</div><div className="ml-1 md:ml-2 py-1 px-2 text-xs rounded-full shadow-inner bg-pills">{post.frontmatter.type}</div></div>
                         <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate ? post.frontmatter.endDate : 'Present'}</div>
                     </span>
                     <div className="pb-2 font-semibold">{post.frontmatter.company}</div>
@@ -56,16 +57,17 @@ const ExpList = ()=>{
                     }
                     </ul>
                     </div>
-                    <div className="mt-2 md:mt-5">Technology Used:
+                    <div className="mt-2 md:mt-5 mb-6">Technology Used:
                         {(post.frontmatter.technology)? Object.entries(post.frontmatter.technology).map((key)=>{
                             return(
                             <>
-                                <span className="ml-0.5 md:ml-2 py-1 px-2 text-xs rounded-full shadow bg-blue bright">{key[1]} </span>
+                                <span className="ml-0.5 md:ml-2 py-1 px-2 text-xs rounded-full shadow bg-pills-sec">{key[1]} </span>
                             </>
                             )
                             })
                             :''}
                     </div>
+                    
                 </div>
                 {/* </div>   */}
                 </Link>           

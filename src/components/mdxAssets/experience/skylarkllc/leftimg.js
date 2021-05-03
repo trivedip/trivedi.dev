@@ -6,7 +6,7 @@ const LeftImg =()=>{
     return(
         <>        
         <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30" >          
-          <div className="self-center overflow-visible img-container shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'45%',flexShrink:'1'}} >
+          <div className="self-center overflow-visible img-container shadow-xl img-bg flex-shrink z-30" style={{flexBasis:'45%',flexShrink:'1'}} >
           {/* <div className="self-center overflow-visible img-container shadow-xl bg-blue"> */}
               {/* <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>               */}
               <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src={'./prof1.jpg'}></StaticImage> 

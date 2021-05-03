@@ -19,7 +19,7 @@ const CsmcriProj =()=>{
                 </div>
               </div>          
               <div className="self-center overflow-visible flex-shrink z-30 justify-center bg-tester" style={{flexBasis:'45%',flexShrink:'1'}}>
-                <div className="img-container-right shadow-xl bg-blue mb-1" >          
+                <div className="img-container-right shadow-xl img-bg mb-1" >          
                     <StaticImage imgClassName="img shadow-xl z-30" placeholder="tracedSVG" src={'././csmcri_logo.jpg'}></StaticImage>                            
                 </div> 
                 <span className="text-sm flex w-full justify-center">CSMCRI Logo</span>

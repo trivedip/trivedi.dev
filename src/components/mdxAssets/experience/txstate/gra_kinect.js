@@ -19,7 +19,7 @@ const GraKinect =()=>{
                 </div>
               </div>  
               <div className="self-center overflow-visible flex-shrink z-30 justify-center" style={{flexBasis:'45%',flexShrink:'1'}}>
-              <div className="img-container-right shadow-xl bg-blue flex-shrink z-30 mb-3" >          
+              <div className="img-container-right shadow-xl img-bg flex-shrink z-30 mb-3" >          
                   <StaticImage imgClassName="img-right shadow-xl z-30" placeholder="tracedSVG" src={'./gra_kinect.jpg'}></StaticImage>                            
               </div> 
               <span className="text-sm flex w-full justify-center">Screenshot - Kinect Data Collection Utility</span>

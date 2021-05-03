@@ -7,7 +7,7 @@ const GraBioSignal =()=>{
         <div className="flex w-full  mt-3 md:mt-3  text-xl uppercase tracking-widest">Biosignal Analysis</div>         
         <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30 mt-3 md:mt8" >          
           <div className="self-center overflow-visible flex-shrink z-30 justify-center" style={{flexBasis:'45%',flexShrink:'1'}}>
-            <div className=" img-container  bg-blue overflow-visible shadow-xl md:mb-2"  >
+            <div className=" img-container overflow-visible shadow-xl md:mb-2 img-bg"  >
                 <StaticImage imgClassName="img shadow-xl z-30" placeholder="tracedSVG" src={'././veteran.jpg'}></StaticImage>                            
             </div> 
             <span className="text-sm flex w-full justify-center">Data collection session from participant</span>

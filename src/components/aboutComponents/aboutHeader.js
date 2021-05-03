@@ -5,8 +5,8 @@ import {VscFilePdf} from 'react-icons/Vsc';
 const AboutHeader =()=>{
     return(
         <>        
-        <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30" >          
-          <div className="self-center overflow-visible img-container shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'33%',flexShrink:'1'}} >
+        <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30 max-w-screen-xl m-auto" >          
+          <div className="self-center overflow-visible img-container shadow-xl img-bg flex-shrink z-30" style={{flexBasis:'33%',flexShrink:'1'}} >
           {/* <div className="self-center overflow-visible img-container shadow-xl bg-blue"> */}
               <StaticImage imgClassName="img shadow-xl z-30" placeholder="tracedSVG" src="../../pages/assets/image/prof1.jpg"></StaticImage>    
           </div> 
@@ -14,7 +14,7 @@ const AboutHeader =()=>{
           <div className="justify-end" style={{flexBasis:'66%',flexShrink:'1'}} >
             <div className="flex flex-col md:ml-20 text-xl justify-end">
               <h1 className="text-3xl mb-5 uppercase tracking-widest header">About Me</h1>
-              <div className="justify-end ">Hi I am <p>Priyank</p> Trivedi, I’m a <p>Master of Computer Science</p> Graduate. I’m a programmer, designer and a big-time foodie. 
+              <div className="justify-end ">Hi I am <p>Priyank</p> Trivedi, I’m a <p>Master's of Computer Science</p> Graduate. I’m a programmer, designer and a big-time foodie. 
               I was born in the small town of India, where I pursued my bachelor’s degree. 
               I currently dwell in beautiful city of <p>San Marcos, Texas</p>. 
               I am curious and motivated to learn new skills and apply it to new projects. --- Add bio-informatics

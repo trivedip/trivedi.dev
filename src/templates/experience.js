@@ -4,12 +4,12 @@ import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import SEO from '../components/sitewideComponents/seo';
+import {GoLinkExternal} from 'react-icons/go';
 
 const expPosts = (data) =>{
     const {body,frontmatter} = data.data.allMdx.nodes[0]; 
     const siteDescription = data.data.site.siteMetadata.description;
     const img = getImage(frontmatter.featuredImage)
-    console.log(frontmatter.featuredImage.childImageSharp);
     const {previous,next} = data.pageContext;  
     return (
         <>
@@ -18,8 +18,10 @@ const expPosts = (data) =>{
             <div>
             <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
             </div>} */}
-            
-            <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">
+            <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">            
+
+            {frontmatter.role && <h1 className="text-4xl bright">{frontmatter.role}</h1>}
+            {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
                 <span className="flex md:space-x-5 mt-5 flex-col md:flex-row mb-2 md:mb-5">
                     <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col shadow-none md:shadow bg-dark-blue" >
                         <div className="uppercase tracking-widest text-sm underline py-2 pl-5">Role</div>   
@@ -45,7 +47,7 @@ const expPosts = (data) =>{
                     </div>
                 </span>
                 <article><MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer></article>
-                <div className="flex flex-col md:flex-row justify-between">
+                <div className="flex flex-col md:flex-row justify-between bright">
                 {(previous===false) ? <span className="not-sr-only"></span> : (
                     <>
                     {previous && (
@@ -83,10 +85,12 @@ query PostsByExp($slug:String){
                 body
                 frontmatter {
                   endDate(formatString: "MMMM YYYY")
-                  startDate(formatString: "MMMM YYYY")
+                  startDate(formatString: "MMMM YYYY")                  
                   role
                   technology
                   bullets
+                  company
+                  link_to_employer
                   featuredImage {
                     childImageSharp {                      
                       gatsbyImageData(

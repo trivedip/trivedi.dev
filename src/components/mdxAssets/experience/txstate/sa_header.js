@@ -27,7 +27,7 @@ const SAHeader =(props)=>{
               </div>              
             </div>
           </div>          
-          {/* <div className="self-center overflow-visible img-container-right shadow-xl bg-blue flex-shrink z-30" style={{flexBasis:'45%',flexShrink:'1'}} >
+          {/* <div className="self-center overflow-visible img-container-right shadow-xl img-bg flex-shrink z-30" style={{flexBasis:'45%',flexShrink:'1'}} >
               <StaticImage imgClassName="img-right shadow-xl z-30" placeholder="blurred" src={'./vr_session.jpg'}></StaticImage> 
                            
           </div>  */}

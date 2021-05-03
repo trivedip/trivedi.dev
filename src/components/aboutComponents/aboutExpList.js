@@ -31,7 +31,7 @@ const AboutExpList = ()=>{
         <section className="flex flex-col mt-5 md:mt-10 z-30">
             <hr/>
         <div className="uppercase tracking-widest text-2xl font-medium py-5 pl-5 header">Education & Software Skills</div>   
-        <span className="flex md:space-x-5 flex-col md:flex-row">
+        <span className="flex md:space-x-5 flex-col md:flex-row ">
             <div className="rounded p-3 flex-1 flex flex-col justify-evenly bg-blue shadow-none md:shadow">
                 <div className="uppercase tracking-widest text-sm underline pt-2 pl-5 font-bold ">Education</div>
                 {about.degrees.map((edu)=>(
@@ -57,7 +57,7 @@ const AboutExpList = ()=>{
                 <div className="edu-title "><div className="inline-block">Past Frameworks</div><div className="px-5">{about.past_frameworks}</div></div>
                 <div className="edu-title "><div className="inline-block">Past Databases</div><div className="px-5">{about.past_database}</div></div>
             </div>
-            <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col justify-evenly shadow-none md:shadow-inner bg-blue opacity-70">
+            <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col justify-evenly shadow-none md:shadow-inner bg-blue opacity-90">
                 <div className="uppercase tracking-widest text-sm underline py-2 pl-5 font-bold ">Past Programming Proficiency</div>   
                 <div className="edu-title inline-block"><div className="inline-block">Past Programming Languages</div><div className="px-5">{about.past_programming_languages}</div></div>
                 <div className="edu-title "><div className="inline-block">Past Frameworks</div><div className="px-5">{about.past_frameworks}</div></div>
@@ -66,8 +66,12 @@ const AboutExpList = ()=>{
         </span>
         <span className="mt-5 flex-col md:flex-row">
             <hr/>
-        <div className="uppercase tracking-widest text-2xl font-medium py-5 pl-5 header">Complete List of Experience</div>   
-            <ExpList/>
+            <div className="">
+                <div className="m-auto max-w-screen-xl">
+                    <div className="uppercase tracking-widest text-2xl font-medium py-5 pl-5 header">Complete List of Experience</div>   
+                    <ExpList/>
+                </div>
+            </div>
         </span >
 
         </section>

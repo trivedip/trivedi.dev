@@ -19,7 +19,7 @@ const ZabumbaProj =()=>{
                 </div>
               </div>          
               <div className="self-center overflow-visible flex-shrink z-30 justify-center" style={{flexBasis:'45%',flexShrink:'1'}}>
-                <div className="img-container-right shadow-xl bg-blue mb-3" >          
+                <div className="img-container-right shadow-xl img-bg mb-3" >          
                     <video muted="true" loop="true" autoplay="true" className="img-right shadow-xl">
                         <source src={Loop}  type="video/mp4" />
                     </video>

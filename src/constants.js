@@ -1,10 +1,14 @@
 export const COLORS = {
     text: {
-      light: '#666666', // white
-      dark: '#c8c8c8', // near-black
+      light: '#333333', // white
+      dark: '#d7d7d7', // near-black
     },
     textHeaders: {
-      light: '#22716a', // white
+      light: '#37698f', // white
+      dark: '#24bfb0', // near-black
+    },
+    textHigilight: {
+      light: '#6495ba', // white
       dark: '#24bfb0', // near-black
     },
     textBright: {
@@ -62,15 +66,31 @@ export const COLORS = {
     },
     bgpills:{
       light:'#6de6b6',
-      dark:'#3e8a6c'
+      dark:'#3c7a62'
+    },    
+    bgpillsSec:{
+      light:'#192b37',
+      dark:'#4f4f4f'
     },    
     selection:{
       light:'#457b9482',
       dark:'#cafdff73'
     },
     blocks:{
-      light:'#f4f4f4a1',
-      dark:'#213d52bf'
+      light:'#e9eff6d1',
+      dark:'#1c1c1c'
+    },
+    blocksHover:{
+      light:'#30455f',
+      dark:'#131313'
+    },
+    footer:{
+      light:'#e9eff691',
+      dark:'#1c1c1c'
+    },
+    imgBackground:{
+      light:'#b7deff',
+      dark:'#686868'
     }
     
   };

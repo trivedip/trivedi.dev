@@ -7,7 +7,7 @@ const SaBobcatTrace =()=>{
         <div className="flex w-full  mt-3 md:mt-3  text-xl uppercase tracking-widest">Bobcat Trace</div>         
         <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30" >          
           <div className="self-center overflow-visible flex-shrink z-30 justify-center" style={{flexBasis:'45%',flexShrink:'1'}}>
-            <div className=" img-container  bg-blue overflow-visible shadow-xl"  >
+            <div className=" img-container  img-bg overflow-visible shadow-xl"  >
                 <StaticImage imgClassName="img shadow-xl z-30" placeholder="tracedSVG" src={'././bobcattrace.jpeg'}></StaticImage>                            
             </div> 
             <span className="text-sm flex w-full justify-center">Screenshot - Bobcat Trace</span>
