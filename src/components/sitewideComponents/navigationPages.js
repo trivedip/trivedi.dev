@@ -5,7 +5,7 @@ const pages =[
         to:"/",
         name:"Home",
         ariaLabel:"Go to homepage of the website",
-        active:false,  
+        active:true,  
 
     },
     {

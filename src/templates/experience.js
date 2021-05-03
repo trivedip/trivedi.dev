@@ -21,7 +21,7 @@ const expPosts = (data) =>{
             <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">            
 
             {frontmatter.role && <h1 className="text-4xl bright">{frontmatter.role}</h1>}
-            {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
+            {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" rel="noopener" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
                 <span className="flex md:space-x-5 mt-5 flex-col md:flex-row mb-2 md:mb-5">
                     <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col shadow-none md:shadow bg-dark-blue" >
                         <div className="uppercase tracking-widest text-sm underline py-2 pl-5">Role</div>   

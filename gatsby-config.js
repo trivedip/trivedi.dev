@@ -14,6 +14,12 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-postcss`,
         `gatsby-transformer-remark`,
+        {
+        resolve: `gatsby-plugin-offline`,
+        options: {
+            precachePages: [`/about/`, `/*/*`],
+            },
+        },
     {
         resolve: `gatsby-source-filesystem`,
         options: {

@@ -35,7 +35,7 @@ const DarkToggle = (props) => {
   return (
       <button onKeyDown={(ev)=> onKeyDownHandler(ev)} className="sm:block hover:text-accent transition duration-150 rotate-0 transform hover:scale-125 lst">
         <div className="sr-only">Toggle dark mode</div>
-        <BiAdjust onClick={(ev)=>{toggleClass(ev)}}  size="" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150" tabIndex="0"/>     
+        <BiAdjust onClick={(ev)=>{toggleClass(ev)}}  size="" className="w-6 text-lg h-6 md:w-5 md:h-5 fill-current transform scale-150 md:mr-2" tabIndex="0"/>     
       </button>
   );
 };

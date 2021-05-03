@@ -31,7 +31,7 @@ function Header() {
                         
                         <div className={menu ? "hidden sm:flex flex-grow items-center space-x-6 z-30":"items-center menu-open sm:flex w-full z-30"}>
                             {pages.map((page)=>(
-                                (page.active) ? <Link to={page.to} className="bright sticky-nav-button text-lg md:w-auto w-full" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
+                                (page.active) ? <Link to={page.to}  className="bright sticky-nav-button text-lg md:w-auto w-full" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
                             ))}
                             <DarkToggle prop={menu}/> 
                         </div>
