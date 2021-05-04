@@ -17,8 +17,8 @@ const AboutHeader =()=>{
               <div className="justify-end ">Hi I am <p>Priyank</p> Trivedi, I’m a <p>Master's of Computer Science</p> Graduate. I’m a programmer, designer and a big-time foodie. 
               I was born in the small town of India, where I pursued my bachelor’s degree. 
               I currently dwell in beautiful city of <p>San Marcos, Texas</p>. 
-              I am curious and motivated to learn new skills and apply it to new projects. --- Add bio-informatics
-              If anything,___WHAT____, I always unravel and try to come up with innovative and improved ideas. 
+              I am curious and motivated to learn new skills and apply it to new projects.
+              If anything, new gets caught up in my eye, I always unravel and try to come up with innovative and improved ideas. 
               <br/>
               <br/>
               Thank you for taking the time to get to know a little bit about me. If you have some ideas, to discuss I am always happy to chat in person over coffee. Feel free to contact me via email at:<p>priyank_at_trivedi_dot_dev</p>
