@@ -29,9 +29,9 @@ function Header() {
                         </div>
                         </Link>
                         
-                        <div className={menu ? "hidden sm:flex flex-grow items-center space-x-6 z-30":"items-center menu-open sm:flex w-full z-30"}>
+                        <div className={menu ? "hidden sm:flex flex-grow items-center md:space-x-6 z-30":"hidden sm:flex flex-grow items-center md:space-x-6 z-30 menu-open "}>
                             {pages.map((page)=>(
-                                (page.active) ? <Link to={page.to}  className="bright sticky-nav-button text-lg md:w-auto w-full" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
+                                (page.active) ? <Link to={page.to} onClick={toggleMenu}  className="bright sticky-nav-button text-lg md:w-auto w-full" aria-label={page.ariaLabel} activeClassName="active">{page.name}</Link> : ''
                             ))}
                             <DarkToggle prop={menu}/> 
                         </div>
@@ -39,7 +39,7 @@ function Header() {
                     </nav>
                 </div>
                 <div className="z-50">
-                    <span className="sm:hidden absolute py-12 z-50 max-w-screen-xl focus:outline-none inline-block" style={{right:'20px',top:'-25px'}} onClick={toggleMenu}>
+                    <span className="sm:hidden absolute py-12 z-50 max-w-screen-xl focus:outline-none inline-block" style={menu? {right:'20px',top:'0px'}:{right:'20px',top:'-25px'}} onClick={toggleMenu}>
                         <BiMenu className="w-8 h-8 z-50" style={{transform:'scale(1.8)'}} />
                     </span>
                 </div>

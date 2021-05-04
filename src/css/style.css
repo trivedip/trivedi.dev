@@ -314,13 +314,17 @@ p{
         top: -30%; 
         left: -30%;   
     }
+    .sticky-nav-button{
+        margin-right:0;
+    }
     .menu-open{
-        min-height: 20vh;
+        min-height: 25vh;
         flex-direction: column;
         justify-content: space-evenly;
         text-align: center;
         display: flex;
         flex-grow: 1;
+        width: 70%;
         justify-items: flex-start;
     }
     .lst{
