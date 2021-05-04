@@ -20,7 +20,7 @@ function Header() {
         <>
                 {loaded?
                 <>
-                <div className={menu ? "m-auto px-3 mt-8 sm:px-12 md:px-20 max-w-screen-xl z-30":"container md:px-20 m-auto max-w-screen-xl fixer z-30"}>
+                <div className={menu ? "m-auto px-3 mt-8 sm:px-12 md:px-20 max-w-screen-xl z-30":"m-auto px-3 mt-8 sm:px-12 md:px-20 max-w-screen-xl z-30"}>
                     <nav className="flex space-x-6 items-center justify-center md:justify-start text-sm sm:flex flex-col md:flex-row z-30 bright">
                         <Link to="/">
                         <div style={{dislay:'inline-block',width:'50px',float:'left',padding:'1rem 1rem 0 0'}}>                

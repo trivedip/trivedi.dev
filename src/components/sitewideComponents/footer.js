@@ -7,11 +7,11 @@ import {GrMail} from 'react-icons/gr';
 const Footer = ()=>{
     return(
         <div className="footer-outer-container footer">
-            <section className="mt-20 m-auto px-3 pb-5 sm:px-12 md:px-20 max-w-screen-xl ">
-                <div className="flex m-5 md:mt-20 justify-center ">
+            <section className="mt-10 m-auto px-3 pb-5 sm:px-12 md:px-20 max-w-screen-xl ">
+                <div className="flex m-5 md:mt-10 justify-center ">
                     <div className="flex flex-col justify-center text-3xl sm:text-4xl m-5 md:m-20 space-y-6">
                         <div>
-                        Let's work togather
+                        Let's build togather
                         </div>
                         <div className="flex flex-row justify-evenly">
                             <a target="_blank" rel="noopener" href="mailto:me@trivedi.dev"><div className="sr-only">Click to Email me</div><GrMail/></a>
