@@ -73,7 +73,7 @@ const AboutExpList = ()=>{
             <hr/>
             <div className="">
                 <div className="m-auto max-w-screen-xl">
-                    <div className="uppercase tracking-widest text-2xl font-medium py-5 pl-5 header">Complete List of Experience</div>   
+                    <div id="exp-list" className="uppercase tracking-widest text-2xl font-medium py-5 pl-5 header">Complete List of Experience</div>   
                     <ExpList/>
                 </div>
             </div>

@@ -8,7 +8,7 @@ const AboutHeader =()=>{
         <span className="flex flex-col md:flex-row space-y-10 md:space-y-0 flex-wrap relative z-30 max-w-screen-xl m-auto" >          
           <div className="self-center overflow-visible img-container shadow-xl img-bg flex-shrink z-30" style={{flexBasis:'33%',flexShrink:'1'}} >
           {/* <div className="self-center overflow-visible img-container shadow-xl bg-blue"> */}
-              <StaticImage imgClassName="img shadow-xl z-30" placeholder="tracedSVG" src="../../pages/assets/image/prof1.jpg"></StaticImage>    
+              <StaticImage imgClassName="img shadow-xl z-30" placeholder="blurred" src="../../pages/assets/image/prof1.jpg"></StaticImage>    
           </div> 
           {/* <div className="justify-end" > */}
           <div className="justify-end" style={{flexBasis:'66%',flexShrink:'1'}} >
