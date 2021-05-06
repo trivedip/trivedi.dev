@@ -21,7 +21,7 @@ const AboutHeader =()=>{
               If anything, new gets caught up in my eye, I always unravel and try to come up with innovative and improved ideas. 
               <br/>
               <br/>
-              Thank you for taking the time to get to know a little bit about me. If you have some ideas, to discuss I am always happy to chat in person over coffee. Feel free to contact me via email at:<p>priyank_at_trivedi_dot_dev</p>
+              Thank you for taking the time to get to know a little bit about me. If you have some ideas, to discuss I am always happy to chat in person over coffee. Feel free to contact me via email at:<p>me_at_priyanktrivedi_dot_com</p>
               <br/>
               <a href="/pdf/Resume_PTrivedi.pdf" target="_blank" className="my-3 p-1 text-lg duration-150 transform hover:scale-105 inline-block" style={{border:'1px solid var(--color-gray700)'}}>
                 <VscFilePdf className="fill-current pl-1 border-black" style={{float:'left',marginTop:'5px',marginRight:'1rem',transform:'scale(1.8)'}}/><div className="inline-block ">Download Résumé (PDF)</div>
