@@ -6,8 +6,9 @@ const blogPosts = (data) =>{
     const {previous,next} = data.pageContext;
     return (
         <>
-            <h1>{frontmatter.title}</h1>
-            <p>{frontmatter.date}</p>
+        <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">   
+            <h1 className="text-2xl">{frontmatter.title}</h1>
+            <p className="text-sm">{frontmatter.date}</p>
             <article><MDXRenderer>{body}</MDXRenderer></article>
             {previous === false ? null : (
                 <>
@@ -27,6 +28,7 @@ const blogPosts = (data) =>{
                 )}
                 </>
             )}
+            </div>
         </>
     )
 };

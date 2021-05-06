@@ -415,3 +415,8 @@ p{
     background-color:var(--color-footer); 
     color:var(--color-textBright);
 }
+
+/* Blog MDX Styles */
+h2{
+    font-size: 2rem !important;
+}
