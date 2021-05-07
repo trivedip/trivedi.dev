@@ -173,15 +173,17 @@ body {
 
 .background-ele{
     position:relative;
-    width: 30px;
-    height: 70px;
-    background-color:var(--color-svg);
+    width: 40px;
+    height: 40px;
+    fill:var(--color-svg);
     left:10%;
-    top:calc(30%);
+    top:75%;
     transform:rotate(45deg);
-    opacity:0.2;
-    
+    opacity:0.2;  
 }
+
+
+
 .z-fix{
     z-index: -1;
 }
@@ -197,11 +199,11 @@ body {
 }
 .background-plus-1{
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right:55%;
+    width: 35px;
+    height: 35px;
+    right:54%;
     fill:var(--color-svg);
-    top:17%;
+    top:14%;
     opacity: 0.5;
     transition: fill 500ms ease-in;
 }
@@ -383,6 +385,11 @@ p{
     color:white;
 }
 
+.hover-fix:hover div{
+    color:white !important;
+}
+
+
 .bg-pills{
     background-color:var(--color-bgpills);
     color:var(--color-textBright);
@@ -407,4 +414,9 @@ p{
 .footer{
     background-color:var(--color-footer); 
     color:var(--color-textBright);
+}
+
+/* Blog MDX Styles */
+h2{
+    font-size: 2rem !important;
 }
