@@ -29,7 +29,7 @@ const RecentExperience = () => {
             return(
             <>     
             <Link to={`/${post.slug}`}>
-            <div className="p-3 md:px-5 md:py-3 my-1 rounded hover:bg-gray-600 hover:text-gray-50 hover-fix ">
+            <div className="p-3 md:px-5 md:py-3 my-2 rounded hover:bg-gray-600 hover:text-gray-50 hover-fix ">
                 <span className="flex flex-col md:flex-row pt-1.5 rounded" >
                     <div className="font-semibold text-lg bright">{post.frontmatter.role}</div>
                     <div className="md:ml-auto flex sm:justify-start md:justify-end">{post.frontmatter.startDate} - {post.frontmatter.endDate ? post.frontmatter.endDate : 'Present'}</div>

@@ -7,7 +7,12 @@ import Background from './animatedBackground';
 import Footer from './footer';
 
 
+
 const Container =({children}) => {
+    // React.useEffect(()=>{
+    //     document.body.style.opacity='1';
+    // },[]);
+    
     return (
         <>
                 <ThemeProvider>

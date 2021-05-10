@@ -9,6 +9,11 @@
     border:0px;
 }
 
+.fade{
+    
+    opacity: 1;
+}
+
 html{
     overflow: auto;
 }
@@ -20,6 +25,7 @@ body {
     max-width: 100%;
     overflow-x:hidden;
     transition: background-color 150ms ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 ::selection{
@@ -346,6 +352,18 @@ p{
     }
     100%{
         transform: rotate(1turn);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 

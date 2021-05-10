@@ -25,7 +25,7 @@ const SaCrec =()=>{
                         <source src={Loop}  type="video/mp4" />
                     </video>
               </div> 
-              <span className="text-sm flex w-full justify-center">Screen Capture - CREC Dashboard</span>
+              <span className="text-sm flex w-full justify-center mt-2">Screen Capture - CREC Dashboard</span>
               </div>        
           </span>        
       </>
