@@ -24,8 +24,6 @@ const LatestBlogPosts = () => {
         Object.keys(data.allMdx.nodes).map((key_index)=>{
             const allPost = data.allMdx.nodes;
             const post = allPost[key_index];
-            console.log("Hello");
-            console.log(post.slug);
             return(
             <>    
             <Link to={`/${post.slug}`}>

@@ -5,6 +5,7 @@ import LatestBlog from '../components/indexComponents/latestBlogContainer';
 import Experience from '../components/indexComponents/recentExperienceContainer';
 import SEO from "../components/sitewideComponents/seo";
 
+
 const Home = ({data}) => {
     const siteDescription = data.site.siteMetadata.description;
     return(

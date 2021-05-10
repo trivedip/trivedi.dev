@@ -9,6 +9,10 @@ import {BiMenu} from 'react-icons/bi';
 
 
 function Header() {   
+    console.log(`                 88""Yb 88""Yb 88 Yb  dP    db    88b 88 88  dP     888888 88""Yb 88 Yb    dP 888888 8888b.  88 
+                 88__dP 88__dP 88  YbdP    dPYb   88Yb88 88odP        88   88__dP 88  Yb  dP  88__    8I  Yb 88 
+                 88"""  88"Yb  88   8P    dP__Yb  88 Y88 88"Yb        88   88"Yb  88   YbdP   88""    8I  dY 88 
+                 88     88  Yb 88  dP    dP""""Yb 88  Y8 88  Yb       88   88  Yb 88    YP    888888 8888Y"  88 `);
     const [menu,setOpen]= useState('false');
     const [loaded,setLoaded]=useState(false);
 
