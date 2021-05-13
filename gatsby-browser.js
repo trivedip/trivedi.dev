@@ -4,6 +4,7 @@ import Container from './src/components/sitewideComponents/container';
 import { MDXProvider } from "@mdx-js/react";
 import "./src/css/style.css";
 import "tailwindcss/dist/base.min.css";
+require("prismjs/themes/prism-okaidia.css")
 const components = {
 	wrapper: ({children}) => <>{children}</>
 }

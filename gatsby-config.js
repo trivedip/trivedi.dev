@@ -16,6 +16,7 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-postcss`,
         `gatsby-transformer-remark`,
+        `gatsby-plugin-sharp`,
     {
         resolve: `gatsby-plugin-offline`,
         options: {
@@ -38,22 +39,20 @@ module.exports = {
         resolve: `gatsby-plugin-mdx`,
         options: {
             extensions:[`.mdx`,`.md`],
-        },
-    },
-        `gatsby-plugin-sharp`,
-        `gatsby-remark-images`,{
-            resolve:`gatsby-plugin-mdx`,
-            options:{
-                gatsbyRemarkPlugins:[
-                    {
-                        resolve:`gatsby-remark-images`,
-                        options:{
-                            maxWidth:1200,
-                        }
+            gatsbyRemarkPlugins: [               
+                {
+                  resolve: "gatsby-remark-prismjs",
+                  options: {},
+                },{
+                    resolve:`gatsby-remark-images`,
+                    options:{
+                        maxWidth:1200,
                     }
-                ]
-            },        
-    },{
+                }
+              ],
+        },
+    },       
+       {
         resolve: "gatsby-plugin-react-svg",
         options: {
           rule: {
