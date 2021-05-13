@@ -21,7 +21,7 @@ const AboutHeader =()=>{
               <br/><br/>
               I am curious and motivated to learn new skills and apply it to new projects. I have a proven track record of delivering large- and small-scale web and desktop applications. My main area of interest includes bioinformatics, time-series analysis, algorithms, and machine learning. I usually strive to develop high performance applications, while striking a balance between beautiful, yet accessible product.
               <br/><br/>
-              Thank you for taking the time to get to know a little bit about me. If you have some ideas, to discuss I am always happy to chat via video calls. Feel free to contact me via following media or download my resume for your reference.
+              Thank you for taking the time to get to know a little bit about me. If you have some ideas to discuss, I am always happy to chat via video calls. Feel free to contact me via following media or download my resume for your reference.
               <br/>
                   <div className="flex flex-col lg:flex-row justify-evenly items-center">
                     <div>

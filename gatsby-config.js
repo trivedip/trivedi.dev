@@ -1,25 +1,27 @@
 module.exports = {
+    flags: { PRESERVE_WEBPACK_CACHE: true },
     siteMetadata: {
         title: `Priyank Trivedi || Portfolio & Blog`,
-        siteUrl: `https://trivedi.dev`,
+        siteUrl: `https://www.priyanktrivedi.com`,
         description: `Priyank Trivedi || Portfolio & Blog`,
         social:{
             github:``
         },
       },
     plugins:[
+        `gatsby-plugin-sitemap`,
         `gatsby-plugin-image`,
         `gatsby-transformer-sharp`,
         `react-icons`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-postcss`,
         `gatsby-transformer-remark`,
-        {
+    {
         resolve: `gatsby-plugin-offline`,
         options: {
             precachePages: [`/about/`, `/*/*`],
             },
-        },
+    },
     {
         resolve: `gatsby-source-filesystem`,
         options: {
