@@ -5,10 +5,10 @@ import React from "react";
 const blogPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx;     
     const {previous,next} = data.pageContext;
-    const siteDescription = data.data.site.siteMetadata.description;
+    // const siteDescription = data.data.site.siteMetadata.description;
     return (
         <>
-        <Seo title={frontmatter.title + " - priyanktrivedi.com > Blog"} description={"priyanktrivedi.com > Blog "+ siteDescription}/> 
+        <Seo title={"Blog > " + frontmatter.title} description={"Blog > " + frontmatter.title}/> 
         <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">   
             <h1 className="text-2xl">{frontmatter.title}</h1>
             <p className="text-sm">{frontmatter.date}</p>

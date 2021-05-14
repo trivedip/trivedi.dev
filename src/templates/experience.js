@@ -12,7 +12,7 @@ const expPosts = (data) =>{
     const {previous,next} = data.pageContext;  
     return (
         <>
-            <Seo title={" Experience > "+frontmatter.role} description={"priyanktrivedi.com > Experience "+ siteDescription}/> 
+            <Seo title={" Experience > "+frontmatter.role} description={frontmatter.role + " | priyanktrivedi.com > Experience "}/> 
             {/* {img && 
             <div>
             <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
