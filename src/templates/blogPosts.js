@@ -1,11 +1,14 @@
 import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
+import Seo from '../components/sitewideComponents/seo';
 import React from "react";
 const blogPosts = (data) =>{
     const {body,frontmatter} = data.data.mdx;     
     const {previous,next} = data.pageContext;
+    const siteDescription = data.data.site.siteMetadata.description;
     return (
         <>
+        <Seo title={frontmatter.title + " - priyanktrivedi.com > Blog"} description={"priyanktrivedi.com > Blog "+ siteDescription}/> 
         <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">   
             <h1 className="text-2xl">{frontmatter.title}</h1>
             <p className="text-sm">{frontmatter.date}</p>
@@ -35,6 +38,12 @@ const blogPosts = (data) =>{
 export default blogPosts;
 export const pageQuery = graphql`
 query PostsBySlug($slug:String){
+    site {
+        siteMetadata {
+        description
+        title
+        }
+    }
     mdx(slug:{eq:$slug}){
         body
         frontmatter{

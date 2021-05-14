@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import {Helmet} from "react-helmet";
-const SEO = ({description, lang, meta, title,link}) =>{
+const Seo = ({description, lang, meta, title,link}) =>{
     const {site} = useStaticQuery(graphql`
     query{
         site{
@@ -20,7 +20,7 @@ const SEO = ({description, lang, meta, title,link}) =>{
     return(
         <Helmet htmlAttributes={{lang,}}
         title={title}
-        titleTemplate={defaultTitle? `%s |${defaultTitle}`:null}
+        titleTemplate={defaultTitle? `%s - ${defaultTitle}`:null}
         link={[{
             rel: `icon`,
             type: `image/jpg`,
@@ -60,9 +60,9 @@ const SEO = ({description, lang, meta, title,link}) =>{
     )
 };
 
-SEO.defaultProps={
+Seo.defaultProps={
     lang:`en`,
     meta:[],
     description:``,
 }
-export default SEO;
+export default Seo;

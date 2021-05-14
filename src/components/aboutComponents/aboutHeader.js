@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 import {BsDownload} from 'react-icons/bs';
 import {VscFilePdf} from 'react-icons/Vsc';
-import {FaGithub,FaLinkedin,FaTwitterSquare} from 'react-icons/fa'
+import {FaGithub,FaLinkedin} from 'react-icons/fa'
 import {GrMail} from 'react-icons/gr';
 const AboutHeader =()=>{
     return(
@@ -30,9 +30,9 @@ const AboutHeader =()=>{
                       <BsDownload className="fill-current mx-2 ml-4" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></a>   
                     </div>
                     <div className="flex flex-row justify-between items-center w-2/3 lg:w-1/3">
-                      <a target="_blank" rel="noopener" href="mailto:me@priyanktrivedi.com"><div className="sr-only">Email me</div><GrMail className="text-3xl " role="link"/></a>
-                      <a target="_blank" rel="noopener" href="https://github.com/trivedip"><div className="sr-only">visit my github profile</div><FaGithub className="text-3xl " role="link" alt="github icon"/></a>
-                      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/trivedipriyank/"><div className="sr-only">connect with me on linked-in </div><FaLinkedin className="text-3xl " role="link"/></a> 
+                      <a target="_blank" rel="noreferrer" href="mailto:me@priyanktrivedi.com"><div className="sr-only">Email me</div><GrMail className="text-3xl " role="link"/></a>
+                      <a target="_blank" rel="noreferrer" href="https://github.com/trivedip"><div className="sr-only">visit my github profile</div><FaGithub className="text-3xl " role="link" alt="github icon"/></a>
+                      <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/trivedipriyank/"><div className="sr-only">connect with me on linked-in </div><FaLinkedin className="text-3xl " role="link"/></a> 
                     </div>
                   </div>
               </div>              

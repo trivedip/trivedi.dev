@@ -2,7 +2,7 @@ import React from 'react';
 import pages from './navigationPages';
 import {Link} from 'gatsby';
 import DarkToggle from './DarkToggle';
-import {FaGithub,FaLinkedin,FaTwitterSquare} from 'react-icons/fa'
+import {FaGithub,FaLinkedin} from 'react-icons/fa'
 import {GrMail} from 'react-icons/gr';
 const Footer = ()=>{
     return(
@@ -14,9 +14,9 @@ const Footer = ()=>{
                         Let's build togather
                         </div>
                         <div className="flex flex-row justify-evenly">
-                            <a target="_blank" rel="noopener" href="mailto:me@priyanktrivedi.com"><div className="sr-only">Email me</div><GrMail role="link"/></a>
-                            <a target="_blank" rel="noopener" href="https://github.com/trivedip"><div className="sr-only">visit my github profile</div><FaGithub role="link" alt="github icon"/></a>
-                            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/trivedipriyank/"><div className="sr-only">connect with me on linked-in </div><FaLinkedin role="link"/></a>
+                            <a target="_blank" rel="noreferrer" href="mailto:me@priyanktrivedi.com"><div className="sr-only">Email me</div><GrMail role="link"/></a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/trivedip"><div className="sr-only">visit my github profile</div><FaGithub role="link" alt="github icon"/></a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/trivedipriyank/"><div className="sr-only">connect with me on linked-in </div><FaLinkedin role="link"/></a>
                         </div>
                     </div>
                 </div>
