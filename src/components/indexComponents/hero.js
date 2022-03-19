@@ -14,7 +14,7 @@ const Hero =()=>{
                     </h1>
                     <div className="flex flex-col md:flex-row md:flex-start">
                     <a href="#down" className="my-3 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Recent Work <BsArrowDown className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></a>    
-                    <Link to="/about/#about"  className="my-3 not-sr-only md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>Learn More / Résumé <BsArrowRight className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
+                    <Link to="/about/#about"  className="my-3 not-sr-only md:mx-5 p-1 text-lg duration-150 transform hover:scale-105" style={{border:'1px solid var(--color-gray700)'}}>About Me / Résumé <BsArrowRight className="fill-current" style={{display:'inline-block',transform:'scale(1.3)',marginTop:'-4px'}}/></Link>    
                     </div>                   
                 </div>                    
             </div>  
