@@ -7,7 +7,7 @@ import {GoLinkExternal} from 'react-icons/go';
 
 const expPosts = (data) =>{
     const {body,frontmatter} = data.data.allMdx.nodes[0]; 
-    const siteDescription = data.data.site.siteMetadata.description;
+    // const siteDescription = data.data.site.siteMetadata.description;
     // const img = getImage(frontmatter.featuredImage)
     const {previous,next} = data.pageContext;  
     return (
