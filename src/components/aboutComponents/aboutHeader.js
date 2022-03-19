@@ -17,7 +17,7 @@ const AboutHeader =()=>{
             <div className="flex flex-col md:ml-20 text-xl justify-end">
               <h1 className="text-3xl mb-5 uppercase tracking-widest header">About Me</h1>
               <div className="justify-end ">
-              Hi I am <p>Priyank Trivedi</p>, I am Master’s of Computer Science Graduate. I am a programmer, designer, and a big-time foodie. I was born in the small town of India, where I pursued my bachelor’s degree, currently I dwell in beautiful city of San Marcos, Texas.
+              Hi I am <p>Priyank Trivedi</p>, I am Master’s of Computer Science Graduate. I am a programmer, designer, and a big-time foodie. I was born in the small town of India, where I pursued my bachelor’s degree, currently I dwell in beautiful city of San Marcos, Texas.
               <br/><br/>
               I am curious and motivated to learn new skills and apply it to new projects. I have a proven track record of delivering large- and small-scale web and desktop applications. My main area of interest includes bioinformatics, time-series analysis, algorithms, and machine learning. I usually strive to develop high performance applications, while striking a balance between beautiful, yet accessible product.
               <br/><br/>

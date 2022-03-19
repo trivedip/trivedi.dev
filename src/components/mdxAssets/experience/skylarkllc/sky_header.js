@@ -1,4 +1,7 @@
 import React from 'react';
+// import { StaticImage } from "gatsby-plugin-image";
+// import {BsDownload} from 'react-icons/bs';
+// import {VscFilePdf} from 'react-icons/Vsc';
 const SkyHeader =(props)=>{   
     return(
         <>        

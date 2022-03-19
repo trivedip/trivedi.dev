@@ -1,4 +1,5 @@
 import React from 'react';
+// import { StaticImage } from "gatsby-plugin-image";
 import Loop from "./loop.mp4";
 const SkyProj =()=>{
     return(
