@@ -43,7 +43,7 @@ function Header() {
                     </nav>
                 </div>
                 <div className="z-50">
-                    <span className="sm:hidden absolute py-12 z-50 max-w-screen-xl focus:outline-none inline-block" style={menu? {right:'20px',top:'0px'}:{right:'20px',top:'-25px'}} onClick={toggleMenu}>
+                    <span className="sm:hidden absolute py-12 z-50 max-w-screen-xl focus:outline-none inline-block" style={menu? {right:'20px',top:'0px'}:{right:'20px',top:'-25px'}} tabIndex={0} role="button" onClick={toggleMenu} onKeyDown={toggleMenu}>
                         <BiMenu className="w-8 h-8 z-50" style={{transform:'scale(1.8)'}} />
                     </span>
                 </div>

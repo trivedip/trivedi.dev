@@ -1,11 +1,10 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
+  // mode: 'jit',
+  content: [
     './public/**/*.html',
     './src/**/*.{js,jsx,vue,mdx}',
     './experience/**/*.mdx',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {

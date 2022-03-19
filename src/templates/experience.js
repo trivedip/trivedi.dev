@@ -2,18 +2,18 @@ import {Link, graphql} from "gatsby";
 import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import SEO from '../components/sitewideComponents/seo';
+// import { getImage } from "gatsby-plugin-image";
+import Seo from '../components/sitewideComponents/seo';
 import {GoLinkExternal} from 'react-icons/go';
 
 const expPosts = (data) =>{
     const {body,frontmatter} = data.data.allMdx.nodes[0]; 
     const siteDescription = data.data.site.siteMetadata.description;
-    const img = getImage(frontmatter.featuredImage)
+    // const img = getImage(frontmatter.featuredImage)
     const {previous,next} = data.pageContext;  
     return (
         <>
-            <SEO title="About Me" description={siteDescription}/> 
+            <Seo title="About Me" description={siteDescription}/> 
             {/* {img && 
             <div>
             <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
@@ -21,7 +21,7 @@ const expPosts = (data) =>{
             <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">            
 
             {frontmatter.role && <h1 className="text-4xl bright">{frontmatter.role}</h1>}
-            {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" rel="noopener" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
+            {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" rel="noreferrer" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
                 <span className="flex md:space-x-5 mt-5 flex-col md:flex-row mb-2 md:mb-5">
                     <div className="rounded p-3 flex-1 mt-5 md:mt-0 flex flex-col shadow-none md:shadow bg-dark-blue" >
                         <div className="uppercase tracking-widest text-sm underline py-2 pl-5">Role</div>   

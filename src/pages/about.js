@@ -2,14 +2,14 @@ import React from 'react';
 // import { Link,graphql } from "gatsby";
 import { graphql } from "gatsby";
 import AboutExpList from '../components/aboutComponents/aboutExpList';
-import SEO from "../components/sitewideComponents/seo";
+import Seo from "../components/sitewideComponents/seo";
 import AboutHeader from '../components/aboutComponents/aboutHeader';
 
 const About = ({data}) => {
     const siteDescription = data.site.siteMetadata.description;
     return(
         <>
-        <SEO title="About Me" description={siteDescription}/> 
+        <Seo title="About Me" description={siteDescription}/> 
         <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">
           <AboutHeader/>
           {/* <Test/> */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 import Loop from './crec.mp4';
 const SaCrec =()=>{
     return(
