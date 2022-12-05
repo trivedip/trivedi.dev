@@ -4,3 +4,5 @@ node_modules
 public/
 yandex_62af77cb0539e03f.html
 package-lock.json
+*.pdf
+
