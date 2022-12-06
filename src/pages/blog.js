@@ -38,11 +38,11 @@ export const pageQuery = graphql`
         }
     }
     allMdx(sort: {order: DESC, fields: [frontmatter___date]}
-      filter: {frontmatter: {published: {eq: true}}, fileAbsolutePath: { regex: "/blog/"}}
+      filter: {frontmatter: {published: {eq: true}}, internal: {contentFilePath: {regex: "/blog/"}}}
       ) {
         nodes {
-          slug
           frontmatter {
+            slug
             date(formatString: "DD MMMM YYYY")
             description
             published

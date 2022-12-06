@@ -1,24 +1,22 @@
 import {Link, graphql} from "gatsby";
-import {MDXRenderer} from "gatsby-plugin-mdx";
+// import {MDXRenderer} from "gatsby-plugin-mdx";
 import React from "react";
 import {BsArrowRight, BsArrowLeft} from 'react-icons/bs';
 import Seo from '../components/sitewideComponents/seo';
 import {GoLinkExternal} from 'react-icons/go';
 
-const expPosts = (data) =>{
-    const {body,frontmatter} = data.data.allMdx.nodes[0]; 
+const expPosts = (data, children) =>{
+    const {frontmatter} = data.data.allMdx.nodes[0]; 
     // const siteDescription = data.data.site.siteMetadata.description;
     // const img = getImage(frontmatter.featuredImage)
     const {previous,next} = data.pageContext;  
+    console.log("--------------");
+    console.log(frontmatter);
     return (
         <>
             <Seo title={" Experience > "+frontmatter.role} description={frontmatter.role + " | priyanktrivedi.com > Experience "}/> 
-            {/* {img && 
-            <div>
-            <GatsbyImage className="tester" image={img} objectFit="cover" alt="Texas State university cover image containing Kinect motion detection, Veteran bio signal collection."></GatsbyImage>
-            </div>} */}
-            <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">            
-
+            <div className="m-auto px-3 sm:px-12 md:px-20 max-w-screen-xl">      
+            <h1>-------------------------------</h1>      
             {frontmatter.role && <h1 className="text-4xl bright">{frontmatter.role}</h1>}
             {frontmatter.link_to_employer ? <h1 className="text-3xl"><a target="_blank" rel="noreferrer" href={frontmatter.link_to_employer}><span className="bright mr-2">@</span>{frontmatter.company}<GoLinkExternal className="inline-block ml-2 bright"/></a></h1>:<h1 className="text-3xl"><span className="bright mr-2">@</span>{frontmatter.company}</h1>}
                 <span className="flex md:space-x-5 mt-5 flex-col md:flex-row mb-2 md:mb-5">
@@ -44,7 +42,9 @@ const expPosts = (data) =>{
                         <div className="inline-block"><div className="px-5">{frontmatter.startDate} - {frontmatter.endDate ? frontmatter.endDate : 'Present'}</div></div>                        
                     </div>
                 </span>
-                <article><MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer></article>
+                {/* <article><MDXRenderer frontmatter={frontmatter}>{body}</MDXRenderer></article> */}
+                <article>{children}</article>
+                <h1>-------------------------------</h1>
                 <div className="flex flex-col md:flex-row justify-between bright">
                 {(previous===false) ? <span className="not-sr-only"></span> : (
                     <>
@@ -78,7 +78,7 @@ query PostsByExp($slug:String){
             title
             }
         }
-        allMdx(filter: {slug: {eq:$slug}}){
+        allMdx(filter: {frontmatter: {slug: {eq:$slug}}}){
             nodes {
                 body
                 frontmatter {

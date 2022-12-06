@@ -5,11 +5,11 @@ const ExpList = ()=>{
     return(
         <StaticQuery query={graphql`
                 query{ allMdx(sort: {order: DESC, fields: [frontmatter___startDate]}
-                    filter: {frontmatter: {published: {eq: true}}, fileAbsolutePath: { regex: "/experience/"}}
+                    filter: {frontmatter: {published: {eq: true}}, internal: {contentFilePath: {regex: "/experience/"}}}
                 ) {
                   nodes {
-                    slug
-                    frontmatter {
+                      frontmatter {
+                      slug
                       date(formatString: "MMMM YYYY")
                       startDate(formatString: "MMMM YYYY")
                       endDate(formatString: "MMMM YYYY")
@@ -29,10 +29,11 @@ const ExpList = ()=>{
             Object.keys(data.allMdx.nodes).map((key_index)=>{
                 const allPost = data.allMdx.nodes;
                 const post = allPost[key_index];
-                
+                console.log("---------------------");
+                console.log(post);
                 return(
                 <>                 
-                <Link to={`/${post.slug}`} key={post.slug}>
+                <Link to={`${post.frontmatter.slug}`} key={post.slug}>
                 {/* <div key={post.slug}> */}
                 <div className="p-3 md:p-5 mb-3 md:mb-5 hover:text-gray-50 blocks-bg relative">
                 <div className="click-me shadow-inner bg-pills-sec">Click for more details</div>

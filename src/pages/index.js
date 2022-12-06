@@ -32,9 +32,9 @@ export const pageQuery = graphql`
         }
     }
     allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
-        nodes {
-          slug
+        nodes {          
           frontmatter {
+            slug
             date(formatString: "DD MMMM YYYY")
             description
             published

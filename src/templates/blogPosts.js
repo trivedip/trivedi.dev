@@ -44,9 +44,10 @@ query PostsBySlug($slug:String){
         title
         }
     }
-    mdx(slug:{eq:$slug}){
+    mdx(frontmatter : {slug:{eq:$slug}}){
         body
         frontmatter{
+            slug
             title
             date(formatString:"Do MMMM YYYY")
         }

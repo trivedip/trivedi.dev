@@ -6,11 +6,11 @@ const LatestBlogPosts = () => {
     return(
     <StaticQuery query={graphql`
             query{ allMdx(limit:3,sort: {order: DESC, fields: [frontmatter___date]}
-                filter: {frontmatter: {published: {eq: true}}, fileAbsolutePath: { regex: "/blog/"}}
+                filter: {frontmatter: {published: {eq: true}}, internal: {contentFilePath: {regex: "/blog/"}}}
             ) {
               nodes {
-                slug
-                frontmatter {
+                  frontmatter {
+                  slug
                   date(formatString: "DD MMMM YYYY")
                   description
                   published
@@ -26,7 +26,7 @@ const LatestBlogPosts = () => {
             const post = allPost[key_index];
             return(
             <>    
-            <Link to={`/${post.slug}`}>
+            <Link to={`/${post.frontmatter.slug}`}>
                 <div className="p-3 md:px-5 md:py-3 my-3 md:my-1 rounded hover:bg-gray-600 hover:text-gray-50">
                     <span className="flex flex-col md:flex-row pt-1.5 rounded" >
                         <div className="font-semibold text-lg">{post.frontmatter.title}</div>
